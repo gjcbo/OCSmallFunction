@@ -102,6 +102,8 @@
         UITextField *tf = [self viewWithTag:5 - j + kSingleTFTag];
         tf.text = @"";
         
+        self.inputString = mStr;
+        
         // 实时回调输入内容
         if (self.finshBlock) {
             self.finshBlock(self.noDisplayTextView.text);
@@ -159,8 +161,6 @@
   这里面不应该用NSNotificaitonCenter 还是应该使用UITextView的代理方法。来进行输入限制。
   4.没有做回调操作。 ✅
   5.没有实时回调。   ✅
-  
-  6.利用代理也有问题。
   */
 
 @end

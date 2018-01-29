@@ -15,4 +15,8 @@ typedef void(^FinshBlock)(NSString *codeStr);
 
 /**是否以密码形式显示*/
 @property(nonatomic, assign) BOOL isShowByPassword;
+
+/**1-29输入的字符串 block回调有问题*/
+@property(nonatomic, strong) NSString *inputString;
+
 @end
