@@ -104,7 +104,7 @@
     NSDictionary *secDic = self.arrangeArray[section];
     NSString *dateStr = secDic[kNYRStr];
     NSArray *nyrArr = secDic[kNYRArr];
-    NSString *timesStr = [NSString stringWithFormat:@"%ld次数",(long)nyrArr.count];
+    NSString *timesStr = [NSString stringWithFormat:@"%ld次",(long)nyrArr.count];
     
     // 赋值
     [sectionView rbSetDateStr:dateStr timesStr:timesStr];
