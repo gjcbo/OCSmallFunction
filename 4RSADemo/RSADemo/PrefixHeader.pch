@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  RSADemo
+//
+//  Created by RaoBo on 2018/2/8.
+//  Copyright © 2018年 关键词. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define kScreen_W [UIScreen mainScreen].bounds.size.width
+#define kScreen_H [UIScreen mainScreen].bounds.size.height
+
+#define kPublickey @"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2EZsHeUJ8FCkx/IrZMyvfiEPaorYyq1CxbOEydll1kj+qOXcq7wxjBgyXdPzdv+MWLpBEdwcuF2JHObEnJqy6NQQ6rQFnyN/7sza19252ktIvdLEIGaC4cyV+Pr59+0ni8eE0r8BJWM3d/EM8hwkgA2LcKSG2D7DCXu+lPmk4CwIDAQAB"
+
+#define kPrivatekey @"MIICeQIBADANBgkqhkiG9w0BAQEFAASCAmMwggJfAgEAAoGBALYRmwd5QnwUKTH8itkzK9+IQ9qitjKrULFs4TJ2WXWSP6o5dyrvDGMGDJd0/N2/4xYukER3By4XYkc5sScmrLo1BDqtAWfI3/uzNrX3bnaS0i90sQgZoLhzJX4+vn37SeLx4TSvwElYzd38QzyHCSADYtwpIbYPsMJe76U+aTgLAgMBAAECgYEApFBbQ3FySRzA2PX8MW13KPOHmWfDWxM1bgq/apVYwzzL7EqUe9DlsvCgqIfSNiaZQUmgtcleV4CPF4y/jn/e3V8hxvUWgSoYr6lyWuopy/FoGbDFS+JIhv6C9HstrCt6vi/G97a4/1LV2t7UIOubztwPHN5Py+scdtrflpw/4/ECQQDrNXExA1iGLTwjqw8SXXWR7vv/oVOI7eaQpNL6527HgJLztAKTbXYuCFXaql7if6/22BnmoXRHMsK6io1JHey/AkEAximnh5X7GwI1L26MDHEknrRsySoARvXVU1l8NRsg7QhQ9cz4x5lOZwHlJslndL/k3Glo6M7DHd66G2T97/NrtQJBAKBxnxng/2TfvHNUP362k/mNPQb+ZD42kh2+4VBXyIB8W0G0XEF23LO/6di0eO8mTMEkXl6taeUbYivfUUs8B38CQQCA+luwRE5MJgO3+5vr/Th4k7a6uDu19AwFVBkj96RWozMOyXqjb4U4RmN/+1b7BmtPisxduzYEGxPHANTHeQiBAkEAhZqArxzJhY0g53lHrwqwq3C8w70np1v/knJQ+BUzXswAx3G2ToVwZVwTuLe39rtYZ+Ie8lw9dYaUNI9NRJegXQ=="
+
+#endif /* PrefixHeader_pch */
