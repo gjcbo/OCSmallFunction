@@ -11,4 +11,5 @@
 5.CoreBlueTooth 蓝牙的使用
 6.cell倒计时重用问题解决
 ![6.cell倒计时重用问题解决思路](https://github.com/gjcbo/OCSmallFunction/raw/master/Pictures/6.cell倒计时重用问题解决.gif)
+7.runtime 动态获取对象属性实现简易字典转模型。
 
