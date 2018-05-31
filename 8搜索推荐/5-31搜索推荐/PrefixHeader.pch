@@ -1,0 +1,35 @@
+//
+//  PrefixHeader.pch
+//  5-31搜索推荐
+//
+//  Created by RaoBo on 2018/5/31.
+//  Copyright © 2018年 关键词. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#define kTagFont [UIFont boldSystemFontOfSize:20.0]
+
+/** tagLab之间的竖直间距 */
+#define kTagVertical_margin    10.0f
+
+/** tagLab与屏幕左右间距 */
+#define kTagScreen_margin  12.f
+
+/** tagLab之间的水平间距 */
+#define kTagHorizontal_margin  15.0f
+
+#define kScreenW  [UIScreen mainScreen].bounds.size.width
+
+
+
+#define NSLog(FORMAT,...) fprintf(stderr, "%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],__LINE__,[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
+
+
+
+#endif /* PrefixHeader_pch */

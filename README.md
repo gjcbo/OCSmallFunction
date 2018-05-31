@@ -12,4 +12,6 @@
 6.cell倒计时重用问题解决
 ![6.cell倒计时重用问题解决思路](https://github.com/gjcbo/OCSmallFunction/raw/master/Pictures/6.cell倒计时重用问题解决.gif)
 7.runtime 动态获取对象属性实现简易字典转模型。
+8.热门搜索:自定义searchBar， 热门搜索动态布局。
+![8.热门搜索效果](https://github.com/gjcbo/OCSmallFunction/raw/master/Pictures/8.热门搜索.png)
 
