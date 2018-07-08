@@ -45,7 +45,12 @@ const char *kPropertListKey = "kPropertListKey";
      这里关联的是一个数组,∴ 用一个数组接收
      */
     NSArray *ptyArr = objc_getAssociatedObject(self, kPropertListKey);
-    if (ptyArr != nil) {
+    //这种判断方式有问题:数组元素个数为空你怎么处理。
+//    if (ptyArr != nil) {
+//        return ptyArr;
+//    }
+
+    if (ptyArr.count) {
         return ptyArr;
     }
     
