@@ -15,3 +15,7 @@
 8.热门搜索:自定义searchBar， 热门搜索动态布局。
 ![8.热门搜索效果](https://github.com/gjcbo/OCSmallFunction/raw/master/Pictures/8.热门搜索.png)
 
+9.单选多选控制器瘦身
+![9.单选多选](https://github.com/gjcbo/OCSmallFunction/raw/master/Pictures/9.单选多选.png)
+
+
