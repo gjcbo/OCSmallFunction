@@ -32,6 +32,15 @@
     [self createTimer];
 }
 
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    //销毁定时器。
+    //NSTimer 是个怪胎。无论是定义成属性 还是 直接创建。他会对他的target对象进行持有,如果是控制器,他会对控制器进行持有。dealloc方法不走导致控制器销毁不掉,通知也移除不掉。需要一个时机来销毁定时器----》销毁控制器--》移除通知。
+    [self.m_timer invalidate];
+}
+
 // 获取模拟数据
 - (NSArray *)simulateData {
     
@@ -41,7 +50,7 @@
     TimeModel *m4 = [TimeModel timeModelWithTitle:@"Quentin" time:394];
     TimeModel *m5 = [TimeModel timeModelWithTitle:@"Samirah" time:345345];
     TimeModel *m6 = [TimeModel timeModelWithTitle:@"Serafina" time:233];
-   TimeModel *m7 = [TimeModel timeModelWithTitle:@"Shanon"    time:4649];
+    TimeModel *m7 = [TimeModel timeModelWithTitle:@"Shanon"    time:4649];
     TimeModel *m8 = [TimeModel timeModelWithTitle:@"Sophie"    time:3454];
     TimeModel *m9 = [TimeModel timeModelWithTitle:@"Steven"    time:54524];
     TimeModel *m10 = [TimeModel timeModelWithTitle:@"Saadiya"   time:235];
@@ -71,10 +80,13 @@
 - (void)timerEvent {
     
     // 在定时器中让 每一个model的所有时间都自减
-    for (int count = 0; count < self.m_dataArray.count; count++) {
-        TimeModel *model = self.m_dataArray[count];
-        [model countDown]; // 时间自减
-    }
+//    for (int count = 0; count < self.m_dataArray.count; count++) {
+//        TimeModel *model = self.m_dataArray[count];
+//        [model countDown]; // 时间自减
+//    }
+    
+    //换种写法 为什么不用for in 遍历(代码跟梢)
+    for (TimeModel *model in self.m_dataArray) {[model countDown]; } // 时间自减
     
     // 发通知到 TimeCell中
     [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_TIME_CELL object:nil];
@@ -103,8 +115,8 @@
     TimeCell *cell = [tableView dequeueReusableCellWithIdentifier:TIME_CELL];
     
     TimeModel *model = self.m_dataArray[indexPath.row];
-    
-    [cell loadData:model indexPath:indexPath];
+
+    [cell configureTimeCellWithModel:model indexPath:indexPath];
     
     return cell;
 }
@@ -116,20 +128,17 @@
     return 100;
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    TimeCell *tmpCell = (TimeCell *)cell;
-    tmpCell.m_isDisplay = YES;
-    
-    TimeModel *model = self.m_dataArray[indexPath.row];
-    
-    [tmpCell loadData:model indexPath:indexPath];
-}
-
 - (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     TimeCell *tmpCell = (TimeCell *)cell;
     
     tmpCell.m_isDisplay = NO;
+}
+
+
+- (void)dealloc {
+    
+    NSLog(@"%s--%d  挂了",__FUNCTION__,__LINE__);
+    
 }
 
 @end

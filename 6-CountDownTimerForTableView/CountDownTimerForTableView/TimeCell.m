@@ -7,7 +7,6 @@
 //
 
 #import "TimeCell.h"
-#import "TimeModel.h"
 #import "CommonMacro.h"
 
 @interface TimeCell()
@@ -17,34 +16,35 @@
 @property(nonatomic, strong) UILabel *m_titleLabel;
 /**时间lb*/
 @property(nonatomic, strong) UILabel *m_timeLabel;
-/**数据*/
+
+/**1.临时存一下 外面传进来的model*/
 @property(nonatomic, strong) id m_data;
-/**下标*/
-@property(nonatomic, strong) NSIndexPath *m_tmpIndexPath;
+
+/**.2.临时存一下 外面传进来的 indexPath*/
+@property(nonatomic, strong) NSIndexPath *m_indexPath;
 
 @end
 
 @implementation TimeCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+#pragma mark - 一 初始化
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        
+        [self defaultConfig];
+        
+        [self buildViews];
+    }
+    return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
 
-    // Configure the view for the selected state
-}
-
-#pragma mark - 重写父类方法
 - (void)defaultConfig {
     [self registerNotificationCenter]; // 注册通知
     
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     self.backgroundColor = [UIColor grayColor];
-                            
-//    self.backgroundColor = [[UIColor grayColor] colorWithAlphaComponent:0.2];
 }
 
 - (void)buildViews {
@@ -66,30 +66,17 @@
     [self.m_backgroundView addSubview:self.m_timeLabel];
 }
 
-- (void)loadData:(id)data indexPath:(NSIndexPath *)indexPath
-{
-    if ([data isMemberOfClass:[TimeModel class]]) {
-        [self storeWeakValueWithData:data indexPath:indexPath];
-        
-        TimeModel *model = (TimeModel *)data;
-        
-        _m_titleLabel.text = model.m_titleStr;
-        _m_timeLabel.text = [NSString stringWithFormat:@"%@",[model currentTimeString]];
-    }
-}
-
-#pragma mark - 工具方法
-// 给data 和 indexPath成员变量赋值
-- (void)storeWeakValueWithData:(id)data indexPath:(NSIndexPath *)indexPath {
-    self.m_data = data;
+#pragma mark - 二 赋值
+- (void)configureTimeCellWithModel:(TimeModel *)model indexPath:(NSIndexPath *)indexPath {
+    //备个份
+    self.m_data = model;
     self.m_indexPath = indexPath;
+    
+    _m_titleLabel.text = model.m_titleStr;
+    _m_timeLabel.text = [NSString stringWithFormat:@"%@",[model currentTimeString]];
 }
 
-- (void)dealloc {
-    [self removeNotificationCenter];
-}
-
-#pragma mark - 通知中心
+#pragma mark - 三 通知中心
 - (void)registerNotificationCenter {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notificationCenterEvent:) name:NOTIFICATION_TIME_CELL object:nil];
 }
@@ -99,10 +86,14 @@
 }
 
 - (void)notificationCenterEvent:(NSNotification *)notif {
-    if (self.m_isDisplay) {
-        [self loadData:self.m_data indexPath:self.m_indexPath];
-    }
+    //不停的给cell赋值。每过1秒计时器时间-1
+    [self configureTimeCellWithModel:self.m_data indexPath:self.m_indexPath];
 }
 
-
+#pragma mark -  五 生命周期
+- (void)dealloc {
+    
+    NSLog(@"TimeCell 被销毁");
+    [self removeNotificationCenter];
+}
 @end

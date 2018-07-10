@@ -33,7 +33,7 @@
     if (_m_countNum <= 0) {
         return @"00:00:00";
     } else {
-        NSString *ctStr = [NSString stringWithFormat:@"%02ld:%02ld:%02ld",_m_countNum/3600,_m_countNum%3600/60,_m_countNum%60];
+        NSString *ctStr = [NSString stringWithFormat:@"%02ld:%02ld:%02ld后结束",_m_countNum/3600,_m_countNum%3600/60,_m_countNum%60];
         return ctStr;
     }
 }

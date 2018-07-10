@@ -13,9 +13,9 @@
 		49590EA320823F0B00751CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49590EA220823F0B00751CA9 /* Assets.xcassets */; };
 		49590EA620823F0B00751CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49590EA420823F0B00751CA9 /* LaunchScreen.storyboard */; };
 		49590EA920823F0B00751CA9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49590EA820823F0B00751CA9 /* main.m */; };
-		49590EB120823FB400751CA9 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49590EB020823FB400751CA9 /* BaseTableViewCell.m */; };
 		49590EB42082411300751CA9 /* TimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49590EB32082411300751CA9 /* TimeCell.m */; };
 		49590EB72082414A00751CA9 /* TimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 49590EB62082414A00751CA9 /* TimeModel.m */; };
+		49FB7CD220F4A4E1002EDFB4 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FB7CD120F4A4E1002EDFB4 /* FirstViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,13 +29,13 @@
 		49590EA520823F0B00751CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49590EA720823F0B00751CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49590EA820823F0B00751CA9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		49590EAF20823FB400751CA9 /* BaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
-		49590EB020823FB400751CA9 /* BaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		49590EB22082411300751CA9 /* TimeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeCell.h; sourceTree = "<group>"; };
 		49590EB32082411300751CA9 /* TimeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeCell.m; sourceTree = "<group>"; };
 		49590EB52082414A00751CA9 /* TimeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeModel.h; sourceTree = "<group>"; };
 		49590EB62082414A00751CA9 /* TimeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeModel.m; sourceTree = "<group>"; };
 		49590EB8208244E700751CA9 /* CommonMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
+		49FB7CD020F4A4E1002EDFB4 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		49FB7CD120F4A4E1002EDFB4 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,10 +73,10 @@
 				49590EB8208244E700751CA9 /* CommonMacro.h */,
 				49590E9C20823F0A00751CA9 /* ViewController.h */,
 				49590E9D20823F0B00751CA9 /* ViewController.m */,
+				49FB7CD020F4A4E1002EDFB4 /* FirstViewController.h */,
+				49FB7CD120F4A4E1002EDFB4 /* FirstViewController.m */,
 				49590EB52082414A00751CA9 /* TimeModel.h */,
 				49590EB62082414A00751CA9 /* TimeModel.m */,
-				49590EAF20823FB400751CA9 /* BaseTableViewCell.h */,
-				49590EB020823FB400751CA9 /* BaseTableViewCell.m */,
 				49590EB22082411300751CA9 /* TimeCell.h */,
 				49590EB32082411300751CA9 /* TimeCell.m */,
 				49590E9F20823F0B00751CA9 /* Main.storyboard */,
@@ -159,8 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49590EB120823FB400751CA9 /* BaseTableViewCell.m in Sources */,
 				49590E9E20823F0B00751CA9 /* ViewController.m in Sources */,
+				49FB7CD220F4A4E1002EDFB4 /* FirstViewController.m in Sources */,
 				49590EB42082411300751CA9 /* TimeCell.m in Sources */,
 				49590EA920823F0B00751CA9 /* main.m in Sources */,
 				49590EB72082414A00751CA9 /* TimeModel.m in Sources */,
