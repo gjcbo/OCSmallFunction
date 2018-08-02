@@ -22,6 +22,7 @@
 		49A1B5F820C02D9E00C70A2C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A1B5F720C02D9E00C70A2C /* SearchViewController.m */; };
 		49A1B5FC20C02DAE00C70A2C /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A1B5FB20C02DAE00C70A2C /* UIView+Extension.m */; };
 		49D3026C211293E2008FB551 /* RBHotView4.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D3026B211293E2008FB551 /* RBHotView4.m */; };
+		49D3026F2112987D008FB551 /* SearchDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D3026E2112987D008FB551 /* SearchDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		49A1B5FB20C02DAE00C70A2C /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		49D3026A211293E2008FB551 /* RBHotView4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBHotView4.h; sourceTree = "<group>"; };
 		49D3026B211293E2008FB551 /* RBHotView4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBHotView4.m; sourceTree = "<group>"; };
+		49D3026D2112987D008FB551 /* SearchDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchDetailViewController.h; sourceTree = "<group>"; };
+		49D3026E2112987D008FB551 /* SearchDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchDetailViewController.m; sourceTree = "<group>"; };
 		9DCE2041292C6929AD2734CD /* Pods-5-31搜索推荐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-5-31搜索推荐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-5-31搜索推荐/Pods-5-31搜索推荐.debug.xcconfig"; sourceTree = "<group>"; };
 		D7C2AD8F63E9862D9DAF7D47 /* libPods-5-31搜索推荐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-5-31搜索推荐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50FD2A78B2D1BEB50276C75 /* Pods-5-31搜索推荐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-5-31搜索推荐.release.xcconfig"; path = "Pods/Target Support Files/Pods-5-31搜索推荐/Pods-5-31搜索推荐.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 			children = (
 				49A1B5F620C02D9E00C70A2C /* SearchViewController.h */,
 				49A1B5F720C02D9E00C70A2C /* SearchViewController.m */,
+				49D3026D2112987D008FB551 /* SearchDetailViewController.h */,
+				49D3026E2112987D008FB551 /* SearchDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				49A1B5FC20C02DAE00C70A2C /* UIView+Extension.m in Sources */,
 				49A1B5F020C02D7C00C70A2C /* RBHotView.m in Sources */,
 				4904CF9520BF88A400F9681C /* ViewController.m in Sources */,
+				49D3026F2112987D008FB551 /* SearchDetailViewController.m in Sources */,
 				4904CFA020BF88A400F9681C /* main.m in Sources */,
 				49D3026C211293E2008FB551 /* RBHotView4.m in Sources */,
 				49A1B5F320C02D7C00C70A2C /* RBSearchNavBarView.m in Sources */,

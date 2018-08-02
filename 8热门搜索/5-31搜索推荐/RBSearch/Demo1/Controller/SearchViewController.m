@@ -7,6 +7,9 @@
 //
 
 #import "SearchViewController.h"
+#import "SearchDetailViewController.h"
+
+//view
 #import "RBHotView.h"
 
 #import "RBHotView2.h"
@@ -25,15 +28,20 @@
 @implementation SearchViewController
 
 
+#pragma mark - 一 生命周期
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+//跳转到下一界面显示 nav 导航条 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
     
     
     self.view.backgroundColor = [UIColor whiteColor];
@@ -73,6 +81,12 @@
     RBHotView3 *hotView = [[RBHotView3 alloc] initWithFrame:CGRectMake(0, 120, kScreenW, 0)];
     [self.view addSubview:hotView];
     hotView.dataArray = @[@"xxx凉了",@"Android",@"JavaEE",@"PHP",@"Web前端",@"Vue",@"微信小程序",@"Java大数据",@"Python爬虫",@"JavaScript",@"运维",@"UI",@"产品经理"];
+    hotView.hotView3ClickTagLbBlock = ^(NSString *str) {
+        NSLog(@"点击了:%@",str);
+        //跳转详情页
+        SearchDetailViewController *detailVC = [[SearchDetailViewController alloc] init];
+        [self.navigationController pushViewController:detailVC animated:YES];
+    };
     
     [self setupView];
 }

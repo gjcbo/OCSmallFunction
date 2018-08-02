@@ -11,4 +11,7 @@
 @interface RBHotView3 : UIView
 @property(nonatomic, strong) NSArray *dataArray;
 
+/**点击tagLb的回调*/
+@property (nonatomic, copy) void(^hotView3ClickTagLbBlock)(NSString *str) ;
+
 @end

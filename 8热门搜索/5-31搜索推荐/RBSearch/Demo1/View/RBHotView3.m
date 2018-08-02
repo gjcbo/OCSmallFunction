@@ -8,7 +8,6 @@
 
 #import "RBHotView3.h"
 #import "UIView+Extension.h"
-#import <Masonry.h>
 
 @interface RBHotView3()
 @property(nonatomic, strong) UILabel *lastLabel;
@@ -19,6 +18,8 @@
 
 - (void)setDataArray:(NSArray *)dataArray {
 
+    if(dataArray.count == 0) return;
+    
     _dataArray = dataArray;
     
     // 热门搜索
@@ -29,7 +30,7 @@
     
     for (int i = 0; i<dataArray.count; i++) {
         NSString *textStr = dataArray[i];
-        UILabel *label = [self __createLabelWithtext:textStr font:kTagFont];
+        UILabel *label = [self __createLabelWithtext:textStr font:kTagFont tag:i];
         
         [self addSubview:label];
         
@@ -75,7 +76,7 @@
 }
 
 #pragma mark - Private method
-- (UILabel *)__createLabelWithtext:(NSString *)str font:(UIFont *)font {
+- (UILabel *)__createLabelWithtext:(NSString *)str font:(UIFont *)font tag:(NSInteger)tag{
     
     UILabel *label = [UILabel new];
     label.textAlignment = NSTextAlignmentCenter;
@@ -84,6 +85,26 @@
     label.backgroundColor = [UIColor lightGrayColor];
     label.text = str;
     label.font = font;
+    
+    //添加点击事件
+    label.userInteractionEnabled = YES;
+    label.tag = tag;
+    UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapTagLableGestureAction:)];
+    
+    [label addGestureRecognizer:tapGes];
     return label;
 }
+
+//点击事件
+- (void)tapTagLableGestureAction:(UITapGestureRecognizer *)gesture {
+    
+    UILabel *tagLb = (UILabel *)gesture.view;
+    NSString *str = tagLb.text;
+//    NSLog(@"点击了:%@",str);
+    
+    if (self.hotView3ClickTagLbBlock) {
+        self.hotView3ClickTagLbBlock(str);
+    }
+}
+
 @end
