@@ -35,13 +35,14 @@
         CGFloat y = k_StateBarH + 64 + 10;
         _searchResultView = [[RBSearchResultView alloc] initWithFrame:CGRectMake(0, y, kScreenW, kScreenH - y)];
         
-        __weak typeof(self) weakSelf = self;
+        RBWeakSelf(self);
+        
         //跳转详情view
         _searchResultView.searchResultViewClickCellBlock = ^(NSString *str, NSIndexPath *indexPath) {
             
             //跳转详情页
             SearchDetailViewController *detailVC = [[SearchDetailViewController alloc] init];
-            [weakSelf.navigationController pushViewController:detailVC animated:YES];
+            [weakself.navigationController pushViewController:detailVC animated:YES];
         };
     }
     return _searchResultView;
@@ -53,12 +54,12 @@
         
         [_searchNavView.searchBar becomeFirstResponder];
         
-        __weak typeof(self) weakSelf = self;
+        RBWeakSelf(self);
         
         //点击搜索按钮
         _searchNavView.searchBlock = ^(NSString *searchStr) {
             NSLog(@"要搜索的字符串是：%@",searchStr);
-            [weakSelf simulateRequestSearchDataWithSearchStr:searchStr];
+            [weakself simulateRequestSearchDataWithSearchStr:searchStr];
             
         };
         
@@ -66,7 +67,7 @@
             NSLog(@"点击了===>取消 按钮");
             // 取消第一响应者
             // 返回
-            [weakSelf dismissViewController];
+            [weakself dismissViewController];
         };
     }
     
@@ -79,13 +80,13 @@
         
         _hotView.dataArray = @[@"xxx凉了",@"Android",@"JavaEE",@"PHP",@"Web前端",@"Vue",@"微信小程序",@"Java大数据",@"Python爬虫",@"JavaScript",@"运维",@"UI",@"产品经理"];
         
-        __weak typeof(self) weakSelf = self;
+        RBWeakSelf(self);
         
         _hotView.hotView3ClickTagLbBlock = ^(NSString *str) {
             NSLog(@"点击了:%@",str);
             //跳转详情页
             SearchDetailViewController *detailVC = [[SearchDetailViewController alloc] init];
-            [weakSelf.navigationController pushViewController:detailVC animated:YES];
+            [weakself.navigationController pushViewController:detailVC animated:YES];
         };
         
     }
