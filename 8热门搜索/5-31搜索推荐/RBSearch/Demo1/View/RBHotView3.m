@@ -17,16 +17,6 @@
 @end
 @implementation RBHotView3
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
-
-
-
 - (void)setDataArray:(NSArray *)dataArray {
 
     _dataArray = dataArray;
@@ -38,25 +28,15 @@
     _lastLabel = nil;
     
     for (int i = 0; i<dataArray.count; i++) {
-        UILabel *label = [UILabel new];
-        label.textAlignment = NSTextAlignmentCenter;
-        label.layer.masksToBounds = YES;
-        label.layer.cornerRadius = 5;
-        
-        label.backgroundColor = [UIColor lightGrayColor];
-        [self addSubview:label];
-
-        
         NSString *textStr = dataArray[i];
+        UILabel *label = [self __createLabelWithtext:textStr font:kTagFont];
         
-        label.text = textStr;
-        label.font = kTagFont;
+        [self addSubview:label];
         
         // 获取字符串对应的size
         CGSize size = [textStr sizeWithAttributes:@{NSFontAttributeName:kTagFont}];
         CGFloat w = size.width + kTagHorizontal_margin;
         CGFloat h = size.height + kTagVertical_margin;
-        
         
         // 设置label的frame
         if (0==i) { //先确定第一个的frame
@@ -82,7 +62,6 @@
             tempFrame.size.height = _lastLabel.rb_bottom;
             self.frame  = tempFrame;
         }
-        
     }
 }
 
@@ -95,4 +74,16 @@
     return _tipLabel;
 }
 
+#pragma mark - Private method
+- (UILabel *)__createLabelWithtext:(NSString *)str font:(UIFont *)font {
+    
+    UILabel *label = [UILabel new];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.layer.masksToBounds = YES;
+    label.layer.cornerRadius = 5;
+    label.backgroundColor = [UIColor lightGrayColor];
+    label.text = str;
+    label.font = font;
+    return label;
+}
 @end

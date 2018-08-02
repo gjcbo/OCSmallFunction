@@ -36,7 +36,7 @@
     
     
     
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor whiteColor];
 //    RBHotView *hotView = [[RBHotView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 0)];
 //    hotView.backgroundColor = [UIColor redColor];
 //
@@ -72,10 +72,7 @@
     
     RBHotView3 *hotView = [[RBHotView3 alloc] initWithFrame:CGRectMake(0, 120, kScreenW, 0)];
     [self.view addSubview:hotView];
-    hotView.dataArray = @[@"iOS凉了",@"Android",@"JavaEE",@"PHP",@"Web前端",@"Vue",@"微信小程序",@"Java大数据",@"Python爬虫",@"JavaScript",@"运维",@"UI",@"产品经理"];
-    
-    
-    NSLog(@"%d",k_iPhoneX);
+    hotView.dataArray = @[@"xxx凉了",@"Android",@"JavaEE",@"PHP",@"Web前端",@"Vue",@"微信小程序",@"Java大数据",@"Python爬虫",@"JavaScript",@"运维",@"UI",@"产品经理"];
     
     [self setupView];
 }

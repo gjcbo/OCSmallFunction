@@ -29,11 +29,17 @@
 #define k_StateBarH (k_iPhoneX ? 44.f : 20.f)
 
 
+//Log
 #ifdef DEBUG
 #define NSLog(FORMAT,...) fprintf(stderr, "%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],__LINE__,[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
 #else
 #define NSLog(FORMAT, ...) nil
 #endif
+
+//颜色相关
+#define RBColor_RGB(r,g,b) RBColor_RGBA(r,g,b,1)
+#define RBColor_RGBA(r , g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(g)/255.0 alpha:a]
+
 
 
 //#ifdef MACRO_Define  // 如果已定义MACRO_Define这个宏

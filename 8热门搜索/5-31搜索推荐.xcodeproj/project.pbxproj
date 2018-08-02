@@ -21,6 +21,7 @@
 		49A1B5F420C02D7C00C70A2C /* RBHotView3.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A1B5EF20C02D7C00C70A2C /* RBHotView3.m */; };
 		49A1B5F820C02D9E00C70A2C /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A1B5F720C02D9E00C70A2C /* SearchViewController.m */; };
 		49A1B5FC20C02DAE00C70A2C /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A1B5FB20C02DAE00C70A2C /* UIView+Extension.m */; };
+		49D3026C211293E2008FB551 /* RBHotView4.m in Sources */ = {isa = PBXBuildFile; fileRef = 49D3026B211293E2008FB551 /* RBHotView4.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,8 @@
 		49A1B5F720C02D9E00C70A2C /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		49A1B5FA20C02DAE00C70A2C /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		49A1B5FB20C02DAE00C70A2C /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		49D3026A211293E2008FB551 /* RBHotView4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBHotView4.h; sourceTree = "<group>"; };
+		49D3026B211293E2008FB551 /* RBHotView4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBHotView4.m; sourceTree = "<group>"; };
 		9DCE2041292C6929AD2734CD /* Pods-5-31搜索推荐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-5-31搜索推荐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-5-31搜索推荐/Pods-5-31搜索推荐.debug.xcconfig"; sourceTree = "<group>"; };
 		D7C2AD8F63E9862D9DAF7D47 /* libPods-5-31搜索推荐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-5-31搜索推荐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50FD2A78B2D1BEB50276C75 /* Pods-5-31搜索推荐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-5-31搜索推荐.release.xcconfig"; path = "Pods/Target Support Files/Pods-5-31搜索推荐/Pods-5-31搜索推荐.release.xcconfig"; sourceTree = "<group>"; };
@@ -105,9 +108,9 @@
 		49A1B5E420C02D5800C70A2C /* RBSearch */ = {
 			isa = PBXGroup;
 			children = (
+				49D302682112908D008FB551 /* CustomView */,
 				49A1B5F920C02DA700C70A2C /* Category */,
-				49A1B5F520C02D9300C70A2C /* Controller */,
-				49A1B5E520C02D6F00C70A2C /* View */,
+				49D30269211290A2008FB551 /* Demo1 */,
 			);
 			path = RBSearch;
 			sourceTree = "<group>";
@@ -121,10 +124,10 @@
 				49A1B5E720C02D7C00C70A2C /* RBHotView2.m */,
 				49A1B5E820C02D7C00C70A2C /* RBHotView3.h */,
 				49A1B5EF20C02D7C00C70A2C /* RBHotView3.m */,
+				49D3026A211293E2008FB551 /* RBHotView4.h */,
+				49D3026B211293E2008FB551 /* RBHotView4.m */,
 				49A1B5E920C02D7C00C70A2C /* RBHotViewByCategory.h */,
 				49A1B5EB20C02D7C00C70A2C /* RBHotViewByCategory.m */,
-				49A1B5EC20C02D7C00C70A2C /* RBSearchNavBarView.h */,
-				49A1B5ED20C02D7C00C70A2C /* RBSearchNavBarView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -145,6 +148,24 @@
 				49A1B5FB20C02DAE00C70A2C /* UIView+Extension.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		49D302682112908D008FB551 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				49A1B5EC20C02D7C00C70A2C /* RBSearchNavBarView.h */,
+				49A1B5ED20C02D7C00C70A2C /* RBSearchNavBarView.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		49D30269211290A2008FB551 /* Demo1 */ = {
+			isa = PBXGroup;
+			children = (
+				49A1B5F520C02D9300C70A2C /* Controller */,
+				49A1B5E520C02D6F00C70A2C /* View */,
+			);
+			path = Demo1;
 			sourceTree = "<group>";
 		};
 		6DB3DFCE41B768C6408E4036 /* Frameworks */ = {
@@ -290,6 +311,7 @@
 				49A1B5F020C02D7C00C70A2C /* RBHotView.m in Sources */,
 				4904CF9520BF88A400F9681C /* ViewController.m in Sources */,
 				4904CFA020BF88A400F9681C /* main.m in Sources */,
+				49D3026C211293E2008FB551 /* RBHotView4.m in Sources */,
 				49A1B5F320C02D7C00C70A2C /* RBSearchNavBarView.m in Sources */,
 				49A1B5F820C02D9E00C70A2C /* SearchViewController.m in Sources */,
 				49A1B5F420C02D7C00C70A2C /* RBHotView3.m in Sources */,

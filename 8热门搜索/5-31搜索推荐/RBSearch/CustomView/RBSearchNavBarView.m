@@ -53,7 +53,8 @@
         tf.enablesReturnKeyAutomatically = YES;
         [tf setValue:[UIColor whiteColor] forKeyPath:(@"_placeholderLabel.textColor")];//placeholder颜色
         [tf setValue:[UIFont systemFontOfSize:16.0] forKeyPath:@"_placeholderLabel.font"];
-        tf.backgroundColor = [UIColor lightGrayColor]; // tf输入框颜色
+//        tf.backgroundColor = [UIColor lightGrayColor]; // tf输入框颜色
+        tf.backgroundColor = RBColor_RGB(220, 220, 220);
     }
     return _searchBar;
 }
