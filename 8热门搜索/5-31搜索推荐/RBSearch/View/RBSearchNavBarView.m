@@ -102,24 +102,21 @@
 }
 
 
-// 触发时机:称为第一响应者时触发、
+// 触发时机:成为第一响应者时触发、
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
-    
-    
     return YES;
 }
 
 
-//触发实际:点击键盘上的搜索按钮。
-
+//触发时机:点击键盘上的搜索按钮。
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     NSLog(@"点击搜索按钮");
     
     // 判断:如果输入的全是空格,什么也不做
     NSString *searchText = searchBar.text;
     NSString *noWhiteSpaveStr = [searchText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    if (noWhiteSpaveStr.length == 0) {return;}
     
+    if (noWhiteSpaveStr.length == 0) return;
     
     [searchBar resignFirstResponder];
     

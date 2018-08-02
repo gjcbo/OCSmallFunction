@@ -17,19 +17,29 @@
 
 /** tagLab之间的竖直间距 */
 #define kTagVertical_margin    10.0f
-
 /** tagLab与屏幕左右间距 */
 #define kTagScreen_margin  12.f
-
 /** tagLab之间的水平间距 */
 #define kTagHorizontal_margin  15.0f
 
-#define kScreenW  [UIScreen mainScreen].bounds.size.width
+#define kScreenW  ([UIScreen mainScreen].bounds.size.width)
+#define kScreenH  ([UIScreen mainScreen].bounds.size.height)
+
+#define k_iPhoneX ((kScreenW == 375.f && kScreenH == 812.f) ? YES : NO)
+#define k_StateBarH (k_iPhoneX ? 44.f : 20.f)
 
 
-
+#ifdef DEBUG
 #define NSLog(FORMAT,...) fprintf(stderr, "%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],__LINE__,[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
+#else
+#define NSLog(FORMAT, ...) nil
+#endif
 
 
+//#ifdef MACRO_Define  // 如果已定义MACRO_Define这个宏
+//    //代码块1
+//#else
+//    //代码块2
+//#endif
 
 #endif /* PrefixHeader_pch */

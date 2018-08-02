@@ -36,7 +36,7 @@
     
     
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor lightGrayColor];
 //    RBHotView *hotView = [[RBHotView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 0)];
 //    hotView.backgroundColor = [UIColor redColor];
 //
@@ -75,14 +75,14 @@
     hotView.dataArray = @[@"iOS凉了",@"Android",@"JavaEE",@"PHP",@"Web前端",@"Vue",@"微信小程序",@"Java大数据",@"Python爬虫",@"JavaScript",@"运维",@"UI",@"产品经理"];
     
     
-    
+    NSLog(@"%d",k_iPhoneX);
     
     [self setupView];
 }
 
 - (void)setupView {
- 
-    self.searchNavView = [[RBSearchNavBarView alloc] initWithFrame:CGRectMake(0, 20, kScreenW, 64)];
+
+    self.searchNavView = [[RBSearchNavBarView alloc] initWithFrame:CGRectMake(0, k_StateBarH, kScreenW, 64)];
     [self.view addSubview:self.searchNavView];
     
     [self.searchNavView.searchBar becomeFirstResponder];
