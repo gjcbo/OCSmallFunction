@@ -40,7 +40,8 @@
 #define RBColor_RGB(r,g,b) RBColor_RGBA(r,g,b,1)
 #define RBColor_RGBA(r , g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(g)/255.0 alpha:a]
 
-
+//#define RBWeakSelf(type)  __weak typeof(type) weak##type = type;
+//#define RBStrongSelf(type)  __strong typeof(type) type = weak##type;
 
 //#ifdef MACRO_Define  // 如果已定义MACRO_Define这个宏
 //    //代码块1
