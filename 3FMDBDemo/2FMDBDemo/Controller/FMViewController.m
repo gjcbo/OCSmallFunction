@@ -60,28 +60,31 @@
 
 - (void)addAction
 {
-    // 创建随机Person对象
-    NSInteger ageRandom = arc4random_uniform(100) + 1;
-    
-    NSArray *nameArr = @[@"张三",@"李四",@"王五",@"乔峰",@"段誉",@"虚竹",@"刘华强"]; // 7
-    int nameRandom = arc4random() % nameArr.count;
-    
-    NSString *name = nameArr[nameRandom];
-    NSInteger age = ageRandom;
-   
-    Person *p = [[Person alloc] init];
-    p.name = name;
-    p.age = age;
-    
-    // 保存到数据库
-    [[DataBase shareDataBase] addPerson:p];
-    
-    // 获取所有数据
-    self.dataArray = [[DataBase shareDataBase] getAllPerson];
+
+    //子线程
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // 创建随机Person对象
+        NSInteger ageRandom = arc4random_uniform(100) + 1;
+        
+        NSArray *nameArr = @[@"张三",@"李四",@"王五",@"乔峰",@"段誉",@"虚竹",@"刘华强"]; // 7
+        int nameRandom = arc4random() % nameArr.count;
+        
+        NSString *name = nameArr[nameRandom];
+        NSInteger age = ageRandom;
+        
+        Person *p = [[Person alloc] init];
+        p.name = name;
+        p.age = age;
+        
+        // 保存到数据库
+        [[DataBase shareDataBase] addPerson:p];
+        
+        // 获取所有数据
+        self.dataArray = [[DataBase shareDataBase] getAllPerson];
+    });
     
     // 更新tableView
     [self.tableView reloadData];
-    
 }
 
 /** 生成 [x,y]之间的随机数;*/

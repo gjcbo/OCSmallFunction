@@ -14,6 +14,10 @@
 		492DB958204D354B0040C0AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 492DB957204D354B0040C0AB /* Assets.xcassets */; };
 		492DB95B204D354B0040C0AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 492DB959204D354B0040C0AB /* LaunchScreen.storyboard */; };
 		492DB95E204D354B0040C0AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 492DB95D204D354B0040C0AB /* main.m */; };
+		4943669E2115F3FA00996695 /* BaseQueueDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943669D2115F3FA00996695 /* BaseQueueDemoController.m */; };
+		494366A12115F59200996695 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494366A02115F59200996695 /* MainViewController.m */; };
+		494366A72115F88E00996695 /* DataBaseQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 494366A62115F88E00996695 /* DataBaseQueueManager.m */; };
+		494366AD2115F9D200996695 /* BookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 494366AC2115F9D200996695 /* BookModel.m */; };
 		499A9ED8204D5419009F6822 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 499A9ED7204D5419009F6822 /* Person.m */; };
 		499A9EDB204D5421009F6822 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 499A9EDA204D5421009F6822 /* Car.m */; };
 		499A9EDE204D55A5009F6822 /* DataBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 499A9EDD204D55A5009F6822 /* DataBase.m */; };
@@ -36,6 +40,14 @@
 		492DB95A204D354B0040C0AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		492DB95C204D354B0040C0AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		492DB95D204D354B0040C0AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4943669C2115F3FA00996695 /* BaseQueueDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseQueueDemoController.h; sourceTree = "<group>"; };
+		4943669D2115F3FA00996695 /* BaseQueueDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseQueueDemoController.m; sourceTree = "<group>"; };
+		4943669F2115F59200996695 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		494366A02115F59200996695 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		494366A52115F88E00996695 /* DataBaseQueueManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBaseQueueManager.h; sourceTree = "<group>"; };
+		494366A62115F88E00996695 /* DataBaseQueueManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataBaseQueueManager.m; sourceTree = "<group>"; };
+		494366AB2115F9D200996695 /* BookModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookModel.h; sourceTree = "<group>"; };
+		494366AC2115F9D200996695 /* BookModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookModel.m; sourceTree = "<group>"; };
 		499A9ED6204D5419009F6822 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		499A9ED7204D5419009F6822 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		499A9ED9204D5421009F6822 /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
@@ -93,9 +105,12 @@
 			children = (
 				499A9ED3204D53FB009F6822 /* Tools */,
 				499A9ED4204D5406009F6822 /* Model */,
+				494366982115F39D00996695 /* DBQueueDemo */,
 				499A9ED5204D540C009F6822 /* Controller */,
 				492DB94E204D354B0040C0AB /* AppDelegate.h */,
 				492DB94F204D354B0040C0AB /* AppDelegate.m */,
+				4943669F2115F59200996695 /* MainViewController.h */,
+				494366A02115F59200996695 /* MainViewController.m */,
 				492DB951204D354B0040C0AB /* ViewController.h */,
 				492DB952204D354B0040C0AB /* ViewController.m */,
 				492DB954204D354B0040C0AB /* Main.storyboard */,
@@ -107,9 +122,20 @@
 			path = 2FMDBDemo;
 			sourceTree = "<group>";
 		};
+		494366982115F39D00996695 /* DBQueueDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4943669C2115F3FA00996695 /* BaseQueueDemoController.h */,
+				4943669D2115F3FA00996695 /* BaseQueueDemoController.m */,
+			);
+			path = DBQueueDemo;
+			sourceTree = "<group>";
+		};
 		499A9ED3204D53FB009F6822 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				494366A52115F88E00996695 /* DataBaseQueueManager.h */,
+				494366A62115F88E00996695 /* DataBaseQueueManager.m */,
 				499A9EDC204D55A5009F6822 /* DataBase.h */,
 				499A9EDD204D55A5009F6822 /* DataBase.m */,
 			);
@@ -123,6 +149,8 @@
 				499A9ED7204D5419009F6822 /* Person.m */,
 				499A9ED9204D5421009F6822 /* Car.h */,
 				499A9EDA204D5421009F6822 /* Car.m */,
+				494366AB2115F9D200996695 /* BookModel.h */,
+				494366AC2115F9D200996695 /* BookModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,7 +299,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				494366A12115F59200996695 /* MainViewController.m in Sources */,
 				499A9EDB204D5421009F6822 /* Car.m in Sources */,
+				494366A72115F88E00996695 /* DataBaseQueueManager.m in Sources */,
+				494366AD2115F9D200996695 /* BookModel.m in Sources */,
 				492DB953204D354B0040C0AB /* ViewController.m in Sources */,
 				499A9EE1204D652D009F6822 /* FMViewController.m in Sources */,
 				499A9EDE204D55A5009F6822 /* DataBase.m in Sources */,
@@ -280,6 +311,7 @@
 				492DB95E204D354B0040C0AB /* main.m in Sources */,
 				499A9ED8204D5419009F6822 /* Person.m in Sources */,
 				492DB950204D354B0040C0AB /* AppDelegate.m in Sources */,
+				4943669E2115F3FA00996695 /* BaseQueueDemoController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

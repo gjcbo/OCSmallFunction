@@ -23,6 +23,9 @@ static DataBase *_dbCtl = nil;
 {
     FMDatabase *_db;
 }
+
+@property (nonatomic, strong) FMDatabaseQueue *dbQueue;
+
 @end
 
 @implementation DataBase
@@ -47,6 +50,10 @@ static DataBase *_dbCtl = nil;
     
     // 文件路径
     NSString *filePath = [documentsPath stringByAppendingPathComponent:kModelDataBase];
+    
+    
+    // 实例化FMDataBaseQueue对象
+    self.dbQueue = [FMDatabaseQueue databaseQueueWithPath:filePath];
     
     // 实例化FMDatabase对象
     _db = [FMDatabase databaseWithPath:filePath];
@@ -85,6 +92,7 @@ static DataBase *_dbCtl = nil;
         }
     }
     maxId = @([maxId integerValue] + 1);
+    
     
     //执行插入语句
     BOOL updateResult = [_db executeUpdate:@"INSERT INTO person(person_id,person_name,person_age,person_number)   VALUES(?,?,?,?)",maxId,person.name,@(person.age),@(person.number)];

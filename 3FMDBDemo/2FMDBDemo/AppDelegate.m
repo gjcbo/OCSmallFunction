@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "FMViewController.h"
+//#import "FMViewController.h"
+//#import "BaseQueueDemoController.h" //FMDataBaseQueue 控制器
+#import "MainViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,14 +18,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    FMViewController *fmVC = [[FMViewController alloc] initWithStyle:(UITableViewStylePlain)];
-    
-    UINavigationController *naVC = [[UINavigationController alloc] initWithRootViewController:fmVC];
+
+    MainViewController *mainVC = [[MainViewController alloc] init];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = naVC;
-    
+    self.window.rootViewController = mainVC;
     
     return YES;
 }
