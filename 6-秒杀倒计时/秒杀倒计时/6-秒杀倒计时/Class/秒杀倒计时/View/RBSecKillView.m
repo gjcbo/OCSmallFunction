@@ -128,11 +128,15 @@
 #pragma mark - 六 计时器
 //在数据请求成功之后开启定时器
 - (void)createSeckillTimer {
+    
+    //如果使用block的方式创建定时器，可以通过 __weak 弱引用来解决循环引用问题。
+    __weak typeof(self) weakSelf = self;
+    
     self.seckillTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
         
         //一秒钟做两件事
         //1.取出所有model。让时间-1
-        for (RBSecKillModel *model in self.dataArray) {
+        for (RBSecKillModel *model in weakSelf.dataArray) {
             [model seckillCountDownTime];
         }
         

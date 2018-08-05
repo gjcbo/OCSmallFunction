@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "MethodViewController1.h"
 #import "MethodViewController2.h"
-#import "MethodViewController3.h"
+#import "MethodViewController3.h" //推荐。✅ 
 #import "MethodViewController4.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>

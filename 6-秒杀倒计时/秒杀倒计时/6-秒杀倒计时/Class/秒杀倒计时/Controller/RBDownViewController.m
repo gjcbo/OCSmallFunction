@@ -8,6 +8,7 @@
 
 #import "RBDownViewController.h"
 #import "RBDownCell.h"
+#import "RBProxy.h" // 使用代理来解决定时器和控制器的循环引用问题。
 
 @interface RBDownViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -39,12 +40,12 @@
 //    self.downTimer = nil;
 //}
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    
-    [self.downTimer invalidate];
-    self.downTimer = nil;
-}
+//- (void)viewDidDisappear:(BOOL)animated {
+//    [super viewDidDisappear:animated];
+//
+//    [self.downTimer invalidate];
+//    self.downTimer = nil;
+//}
 
 - (void)setupView {
     self.view.backgroundColor = [UIColor whiteColor];
@@ -75,8 +76,14 @@
 //创建定时器
 - (void)createTimer {
     
-    self.downTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerEvent) userInfo:nil repeats:YES];
+    //使用NSProxy来解决定时器的循环引用问题:
+    //原来：VC 强引用--->NSTimer 强引用--->VC
+    //现在: VC 强引用--->NSTimer 强引用 ---->RBProxy 弱引用----> VC 断开了循环引用，控制器销毁都被销毁。
+    //这是一种思想、方法：引入一个第三方，将其中的一条线设为弱引用，就有效的解决了循环引用问题。
+    //联想到以前比较大小，总喜欢多搞出来一个变量： int temp = a; a = b; b = temp;
+    self.downTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:[RBProxy rbProxyWithTarget:self] selector:@selector(timerEvent) userInfo:nil repeats:YES];
     
+    //解决滑动scrollview时:定时器无效问题。
     [[NSRunLoop currentRunLoop] addTimer:self.downTimer forMode:NSRunLoopCommonModes];
 }
 
@@ -139,8 +146,8 @@
     
     //问题 ： 在dealloc中并不能销毁定时器？ 时机问题？
 //    //销毁定时器、
-//    [self.downTimer invalidate];
-//    self.downTimer = nil;
+    [self.downTimer invalidate];
+    self.downTimer = nil;
 }
 
 #pragma mark - 思考题

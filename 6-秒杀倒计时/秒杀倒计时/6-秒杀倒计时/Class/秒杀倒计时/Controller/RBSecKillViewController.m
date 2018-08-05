@@ -32,12 +32,12 @@
     [self setupView];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    
-    //注意定时器的销毁时机！！！
-    [self.seckillView secKillViewInvalidateTimer];
-}
+//- (void)viewWillDisappear:(BOOL)animated {
+//    [super viewWillDisappear:animated];
+//    
+//    //注意定时器的销毁时机！！！
+//    [self.seckillView secKillViewInvalidateTimer];
+//}
 
 - (void)setupView {
     self.view.backgroundColor = [UIColor whiteColor];

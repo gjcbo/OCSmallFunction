@@ -30,6 +30,7 @@
 		49C0D61B2111453D009B6C56 /* MJPropertyKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C0D60D2111453D009B6C56 /* MJPropertyKey.m */; };
 		49C0D61C2111453D009B6C56 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49C0D6112111453D009B6C56 /* Info.plist */; };
 		49C0D61D2111453D009B6C56 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C0D6122111453D009B6C56 /* MJFoundation.m */; };
+		49C87FFC2116CC7500C2FF31 /* RBProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C87FFB2116CC7500C2FF31 /* RBProxy.m */; };
 		49CCCE6521113B2900FD92ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CCCE6421113B2900FD92ED /* AppDelegate.m */; };
 		49CCCE6821113B2900FD92ED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49CCCE6721113B2900FD92ED /* ViewController.m */; };
 		49CCCE6B21113B2900FD92ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49CCCE6921113B2900FD92ED /* Main.storyboard */; };
@@ -86,6 +87,8 @@
 		49C0D6122111453D009B6C56 /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
 		49C0D61E211147CD009B6C56 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		49C0D61F21114817009B6C56 /* CommonMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonMacro.h; sourceTree = "<group>"; };
+		49C87FFA2116CC7500C2FF31 /* RBProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBProxy.h; sourceTree = "<group>"; };
+		49C87FFB2116CC7500C2FF31 /* RBProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBProxy.m; sourceTree = "<group>"; };
 		49CCCE6021113B2900FD92ED /* 6-秒杀倒计时.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "6-秒杀倒计时.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49CCCE6321113B2900FD92ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		49CCCE6421113B2900FD92ED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -176,6 +179,15 @@
 			path = MJExtension;
 			sourceTree = "<group>";
 		};
+		49C87FF92116CC6100C2FF31 /* RBProxy */ = {
+			isa = PBXGroup;
+			children = (
+				49C87FFA2116CC7500C2FF31 /* RBProxy.h */,
+				49C87FFB2116CC7500C2FF31 /* RBProxy.m */,
+			);
+			path = RBProxy;
+			sourceTree = "<group>";
+		};
 		49CCCE5721113B2900FD92ED = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +228,7 @@
 		49CCCE7921113B3900FD92ED /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				49C87FF92116CC6100C2FF31 /* RBProxy */,
 				499F4DE82111A8C700CDB0F6 /* Category */,
 				49CCCE7A21113B3900FD92ED /* 秒杀倒计时 */,
 			);
@@ -367,6 +380,7 @@
 				49C0D6182111453D009B6C56 /* NSObject+MJProperty.m in Sources */,
 				49CCCE6821113B2900FD92ED /* ViewController.m in Sources */,
 				49C0D61A2111453D009B6C56 /* NSString+MJExtension.m in Sources */,
+				49C87FFC2116CC7500C2FF31 /* RBProxy.m in Sources */,
 				49A442FB21116745005F351F /* RBSecKillModel.m in Sources */,
 				49CCCE7321113B2A00FD92ED /* main.m in Sources */,
 				49C0D6132111453D009B6C56 /* MJPropertyType.m in Sources */,
