@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4900FAF1211688F000E86D83 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4900FAF0211688F000E86D83 /* AppDelegate.m */; };
+		4900FAF4211688F000E86D83 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4900FAF3211688F000E86D83 /* ViewController.m */; };
+		4900FAF7211688F000E86D83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4900FAF5211688F000E86D83 /* Main.storyboard */; };
+		4900FAF9211688F200E86D83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4900FAF8211688F200E86D83 /* Assets.xcassets */; };
+		4900FAFC211688F200E86D83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4900FAFA211688F200E86D83 /* LaunchScreen.storyboard */; };
+		4900FAFF211688F200E86D83 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4900FAFE211688F200E86D83 /* main.m */; };
+		4900FB132116922200E86D83 /* RBProxyNSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4900FB122116922200E86D83 /* RBProxyNSObject.m */; };
+		4900FB19211696A700E86D83 /* RBProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4900FB18211696A700E86D83 /* RBProxy.m */; };
+		4900FB1C21169B4700E86D83 /* BaseDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4900FB1B21169B4700E86D83 /* BaseDemoViewController.m */; };
+		4900FB2821169E8400E86D83 /* MethodViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 4900FB2721169E8400E86D83 /* MethodViewController1.m */; };
+		4900FB2B21169F2300E86D83 /* MethodViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 4900FB2A21169F2300E86D83 /* MethodViewController2.m */; };
+		4900FB2E21169F7D00E86D83 /* MethodViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 4900FB2D21169F7D00E86D83 /* MethodViewController3.m */; };
+		4900FB322116A00800E86D83 /* MethodViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = 4900FB312116A00800E86D83 /* MethodViewController4.m */; };
+		4900FB352116A72100E86D83 /* 解决定时器循环引用.png in Resources */ = {isa = PBXBuildFile; fileRef = 4900FB332116A72100E86D83 /* 解决定时器循环引用.png */; };
+		4900FB362116A72100E86D83 /* 定时器循环引用.png in Resources */ = {isa = PBXBuildFile; fileRef = 4900FB342116A72100E86D83 /* 定时器循环引用.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4900FAEC211688F000E86D83 /* 定时器-循环引用.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "定时器-循环引用.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4900FAEF211688F000E86D83 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4900FAF0211688F000E86D83 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4900FAF2211688F000E86D83 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4900FAF3211688F000E86D83 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4900FAF6211688F000E86D83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4900FAF8211688F200E86D83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4900FAFB211688F200E86D83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4900FAFD211688F200E86D83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4900FAFE211688F200E86D83 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4900FB112116922200E86D83 /* RBProxyNSObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBProxyNSObject.h; sourceTree = "<group>"; };
+		4900FB122116922200E86D83 /* RBProxyNSObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBProxyNSObject.m; sourceTree = "<group>"; };
+		4900FB17211696A700E86D83 /* RBProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBProxy.h; sourceTree = "<group>"; };
+		4900FB18211696A700E86D83 /* RBProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBProxy.m; sourceTree = "<group>"; };
+		4900FB1A21169B4700E86D83 /* BaseDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseDemoViewController.h; sourceTree = "<group>"; };
+		4900FB1B21169B4700E86D83 /* BaseDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseDemoViewController.m; sourceTree = "<group>"; };
+		4900FB2621169E8400E86D83 /* MethodViewController1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodViewController1.h; sourceTree = "<group>"; };
+		4900FB2721169E8400E86D83 /* MethodViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodViewController1.m; sourceTree = "<group>"; };
+		4900FB2921169F2300E86D83 /* MethodViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodViewController2.h; sourceTree = "<group>"; };
+		4900FB2A21169F2300E86D83 /* MethodViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodViewController2.m; sourceTree = "<group>"; };
+		4900FB2C21169F7D00E86D83 /* MethodViewController3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodViewController3.h; sourceTree = "<group>"; };
+		4900FB2D21169F7D00E86D83 /* MethodViewController3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodViewController3.m; sourceTree = "<group>"; };
+		4900FB302116A00800E86D83 /* MethodViewController4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodViewController4.h; sourceTree = "<group>"; };
+		4900FB312116A00800E86D83 /* MethodViewController4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodViewController4.m; sourceTree = "<group>"; };
+		4900FB332116A72100E86D83 /* 解决定时器循环引用.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "解决定时器循环引用.png"; sourceTree = "<group>"; };
+		4900FB342116A72100E86D83 /* 定时器循环引用.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "定时器循环引用.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4900FAE9211688F000E86D83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4900FAE3211688F000E86D83 = {
+			isa = PBXGroup;
+			children = (
+				4900FAEE211688F000E86D83 /* 定时器-循环引用 */,
+				4900FAED211688F000E86D83 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4900FAED211688F000E86D83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4900FAEC211688F000E86D83 /* 定时器-循环引用.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4900FAEE211688F000E86D83 /* 定时器-循环引用 */ = {
+			isa = PBXGroup;
+			children = (
+				4900FB342116A72100E86D83 /* 定时器循环引用.png */,
+				4900FB332116A72100E86D83 /* 解决定时器循环引用.png */,
+				4900FB052116892100E86D83 /* 解决方式一 */,
+				4900FB062116892900E86D83 /* 解决方式二 */,
+				4900FB072116893200E86D83 /* 解决方式三 */,
+				4900FB2F21169FF100E86D83 /* 解决方式四 */,
+				4900FAEF211688F000E86D83 /* AppDelegate.h */,
+				4900FAF0211688F000E86D83 /* AppDelegate.m */,
+				4900FAF2211688F000E86D83 /* ViewController.h */,
+				4900FAF3211688F000E86D83 /* ViewController.m */,
+				4900FB1A21169B4700E86D83 /* BaseDemoViewController.h */,
+				4900FB1B21169B4700E86D83 /* BaseDemoViewController.m */,
+				4900FAF5211688F000E86D83 /* Main.storyboard */,
+				4900FAF8211688F200E86D83 /* Assets.xcassets */,
+				4900FAFA211688F200E86D83 /* LaunchScreen.storyboard */,
+				4900FAFD211688F200E86D83 /* Info.plist */,
+				4900FAFE211688F200E86D83 /* main.m */,
+			);
+			path = "定时器-循环引用";
+			sourceTree = "<group>";
+		};
+		4900FB052116892100E86D83 /* 解决方式一 */ = {
+			isa = PBXGroup;
+			children = (
+				4900FB2621169E8400E86D83 /* MethodViewController1.h */,
+				4900FB2721169E8400E86D83 /* MethodViewController1.m */,
+			);
+			path = "解决方式一";
+			sourceTree = "<group>";
+		};
+		4900FB062116892900E86D83 /* 解决方式二 */ = {
+			isa = PBXGroup;
+			children = (
+				4900FB2921169F2300E86D83 /* MethodViewController2.h */,
+				4900FB2A21169F2300E86D83 /* MethodViewController2.m */,
+				4900FB112116922200E86D83 /* RBProxyNSObject.h */,
+				4900FB122116922200E86D83 /* RBProxyNSObject.m */,
+			);
+			path = "解决方式二";
+			sourceTree = "<group>";
+		};
+		4900FB072116893200E86D83 /* 解决方式三 */ = {
+			isa = PBXGroup;
+			children = (
+				4900FB17211696A700E86D83 /* RBProxy.h */,
+				4900FB18211696A700E86D83 /* RBProxy.m */,
+				4900FB2C21169F7D00E86D83 /* MethodViewController3.h */,
+				4900FB2D21169F7D00E86D83 /* MethodViewController3.m */,
+			);
+			path = "解决方式三";
+			sourceTree = "<group>";
+		};
+		4900FB2F21169FF100E86D83 /* 解决方式四 */ = {
+			isa = PBXGroup;
+			children = (
+				4900FB302116A00800E86D83 /* MethodViewController4.h */,
+				4900FB312116A00800E86D83 /* MethodViewController4.m */,
+			);
+			path = "解决方式四";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4900FAEB211688F000E86D83 /* 定时器-循环引用 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4900FB02211688F200E86D83 /* Build configuration list for PBXNativeTarget "定时器-循环引用" */;
+			buildPhases = (
+				4900FAE8211688F000E86D83 /* Sources */,
+				4900FAE9211688F000E86D83 /* Frameworks */,
+				4900FAEA211688F000E86D83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "定时器-循环引用";
+			productName = "定时器-循环引用";
+			productReference = 4900FAEC211688F000E86D83 /* 定时器-循环引用.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4900FAE4211688F000E86D83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = RaoBo;
+				TargetAttributes = {
+					4900FAEB211688F000E86D83 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 4900FAE7211688F000E86D83 /* Build configuration list for PBXProject "定时器-循环引用" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4900FAE3211688F000E86D83;
+			productRefGroup = 4900FAED211688F000E86D83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4900FAEB211688F000E86D83 /* 定时器-循环引用 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4900FAEA211688F000E86D83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4900FB352116A72100E86D83 /* 解决定时器循环引用.png in Resources */,
+				4900FB362116A72100E86D83 /* 定时器循环引用.png in Resources */,
+				4900FAFC211688F200E86D83 /* LaunchScreen.storyboard in Resources */,
+				4900FAF9211688F200E86D83 /* Assets.xcassets in Resources */,
+				4900FAF7211688F000E86D83 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4900FAE8211688F000E86D83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4900FAF4211688F000E86D83 /* ViewController.m in Sources */,
+				4900FB2821169E8400E86D83 /* MethodViewController1.m in Sources */,
+				4900FB2B21169F2300E86D83 /* MethodViewController2.m in Sources */,
+				4900FB132116922200E86D83 /* RBProxyNSObject.m in Sources */,
+				4900FB322116A00800E86D83 /* MethodViewController4.m in Sources */,
+				4900FB2E21169F7D00E86D83 /* MethodViewController3.m in Sources */,
+				4900FAFF211688F200E86D83 /* main.m in Sources */,
+				4900FAF1211688F000E86D83 /* AppDelegate.m in Sources */,
+				4900FB1C21169B4700E86D83 /* BaseDemoViewController.m in Sources */,
+				4900FB19211696A700E86D83 /* RBProxy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4900FAF5211688F000E86D83 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4900FAF6211688F000E86D83 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4900FAFA211688F200E86D83 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4900FAFB211688F200E86D83 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4900FB00211688F200E86D83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4900FB01211688F200E86D83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4900FB03211688F200E86D83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "定时器-循环引用/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.liyuan.www.--------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4900FB04211688F200E86D83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "定时器-循环引用/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.liyuan.www.--------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4900FAE7211688F000E86D83 /* Build configuration list for PBXProject "定时器-循环引用" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4900FB00211688F200E86D83 /* Debug */,
+				4900FB01211688F200E86D83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4900FB02211688F200E86D83 /* Build configuration list for PBXNativeTarget "定时器-循环引用" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4900FB03211688F200E86D83 /* Debug */,
+				4900FB04211688F200E86D83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4900FAE4211688F000E86D83 /* Project object */;
+}
