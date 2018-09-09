@@ -20,7 +20,6 @@
 
 10.单元测试
 [单元测试简单笔记](https://github.com/gjcbo/OCSmallFunction/blob/master/10-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/单元测试笔记.md)
-- [iOS编译过程的原理和应用](https://github.com/LeoMobileDeveloper/Blogs/blob/master/iOS/iOS%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E5%BA%94%E7%94%A8.md)
 
 
 
