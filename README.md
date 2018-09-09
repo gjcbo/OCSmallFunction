@@ -18,5 +18,5 @@
 9.单选多选控制器瘦身
 ![9.单选多选](https://github.com/gjcbo/OCSmallFunction/raw/master/Pictures/9.单选多选.gif)
 10.单元测试
-[单元测试简单笔记](https://github.com/gjcbo/OCSmallFunction/raw/master/10-单元测试/单元测试README.md)
+[单元测试简单笔记](https://github.com/gjcbo/OCSmallFunction/raw/master/10-单元测试/README.md)
 
