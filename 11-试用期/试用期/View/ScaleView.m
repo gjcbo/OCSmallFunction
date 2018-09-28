@@ -8,10 +8,14 @@
 
 #import "ScaleView.h"
 @interface ScaleView ()
-//div1 : 取消按钮
-//div2 : 左边三个按钮 右边 2个按钮(厘米/英寸)
-//div3 : 中间view 高度定制 右边是一个tableView
-//div4 : 底部veiw (一个label + 一个按钮)
+@property (nonatomic, strong) UISlider *vSlider; //垂直滑块
+@property (nonatomic, strong) UILabel *vLb; //垂直方向的文字
+
+@property (nonatomic, strong) UISlider *hSlider;//水平滑块
+@property (nonatomic, strong) UILabel *hLb; //水平方向的文字
+
+@property (nonatomic, strong) UIView *rectView;
+
 @end
 
 @implementation ScaleView
@@ -24,6 +28,7 @@
     }
     return self;
 }
+
 
 
 @end

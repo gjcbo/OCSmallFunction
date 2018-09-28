@@ -8,9 +8,12 @@
 
 #import "ReleaseProductController.h"
 #import "ZYSegmentedControl.h"
+#import "VSlider.h"
+#import "HSlider.h"
 @interface ReleaseProductController ()
 @property (nonatomic, strong) UIView *rectView;
-@property (nonatomic, strong) ZYSegmentedControl *seg3;
+@property (nonatomic, strong) VSlider *tempVSlider;
+@property (nonatomic, strong) HSlider *tempHSlider;
 @end
 
 @implementation ReleaseProductController
@@ -21,48 +24,76 @@
     self.navigationItem.title = @"发布产品";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    
 //    [self testScaleBrownView];
     
-    UIImage *img1 = [UIImage imageNamed:@"形状-矩形.png"];
-    UIImage *img2 = [UIImage imageNamed:@"双圆.png"];
-    UIImage *img3 = [UIImage imageNamed:@"圆形未选中.png"];
     
-    UISegmentedControl *seg = [[UISegmentedControl alloc] initWithItems:@[img1, img2, img3]];
-    seg.frame = CGRectMake(10, 100, 100, 30);
-    seg.backgroundColor = [UIColor whiteColor]; //背景色
-    seg.tintColor = [UIColor brownColor]; //选中的颜色
+    //创建一个
+    //创建一个棕色的矩形
+    self.rectView.frame = CGRectMake(50, 190, 100, 100);
+    [self.view addSubview:self.rectView];
     
-    [self.view addSubview:seg];
+    VSlider *vSlider = [[VSlider alloc] initWithFrame:CGRectMake(10, 200, 50, 200)];
+    vSlider.backgroundColor = [UIColor redColor];
+    [self.view addSubview:vSlider];
     
-    UISegmentedControl *seg2 = [[UISegmentedControl alloc] initWithItems:@[@"厘米",@"英寸"]];
-    seg2.frame = CGRectMake(10, 200, 80, 30);
-    seg2.backgroundColor = [UIColor whiteColor];
-    seg2.tintColor = [UIColor brownColor];
-    [self.view addSubview:seg2];
+    __weak typeof(self) weakSelf = self;
     
-    CGFloat screen_W = [UIScreen mainScreen].bounds.size.width;
+    self.tempVSlider = vSlider;
     
-    UIButton *btn = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    btn.frame = CGRectMake(30, 450, 100, 30);
-    [self.view addSubview:btn];
-    [btn setTitle:@"添加" forState:(UIControlStateNormal)];
-    [btn setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
-    [btn addTarget:self action:@selector(addBtnAction:) forControlEvents:(UIControlEventTouchUpInside)];
+    self.tempVSlider.vSliderBlock = ^(UISlider *vSlider) {
+        NSLog(@"v:%f",vSlider.value);
+        CGFloat tempH = weakSelf.rectView.frame.size.height;
+        CGRect tempFrame = weakSelf.rectView.frame;
+        CGFloat scale = vSlider.value;
+        
+        if (scale < 0.1) {
+            scale = 0.1;
+        }
+        if (tempH < 10) {
+            tempH = 10;
+        }else {
+            tempH = 100;
+        }
+        
+        CGFloat h = tempH * scale;
+        
+        tempFrame.size.height = h;
+        weakSelf.rectView.frame = tempFrame;
 
-    ZYSegmentedControl *seg5 = [[ZYSegmentedControl alloc] initWithItems:@[@"按人数"] target:self sel:@selector(clickSegmentControlAction:)];
-    seg5.frame = CGRectMake(20, 400, screen_W - 40, 30);
-    [self.view addSubview:seg5];
-    self.seg3 = seg5;
-}
-- (void)clickSegmentControlAction:(ZYSegmentedControl *)seg {
-    NSLog(@"选中的下表是:%ld",seg.selectedSegmentIndex);
+        
+        //文字高度 //最大 38
+        CGFloat labelHeight = scale *38 ;
+        weakSelf.tempVSlider.vLb.text = [NSString stringWithFormat:@"%.0f厘米",labelHeight];
+    };
+    
+    HSlider *hSlider = [[HSlider alloc] initWithFrame:CGRectMake(40, 200+200, 200, 50)];
+    hSlider.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:hSlider];
+    
+    self.tempHSlider = hSlider;
+    hSlider.hSliderBlock = ^(UISlider *slider) {
+        CGFloat tempW = weakSelf.rectView.frame.size.width;
+        CGRect tempFrame = weakSelf.rectView.frame;
+        CGFloat scale = slider.value;
+        
+        //处理边界情况
+        if (scale < 0.1) {
+            scale = 0.1;
+        }
+        if (tempW < 10) {
+            tempW = 10;
+        }else {
+            tempW = 100;
+        }
+        
+        CGFloat w = tempW * scale;
+        tempFrame.size.width = w;
+        weakSelf.rectView.frame =tempFrame;
+        
+        weakSelf.tempHSlider.hLb.text = [NSString stringWithFormat:@"%.0f厘米",scale *38];
+    };
 }
 
-
-- (void)addBtnAction:(UIButton *)btn {
-    [self.seg3 insertItemWithTitleArr:@[@"按人份",@"按模具"] selectedIndex:0];
-}
 
 
 #pragma mark - 缩放view
