@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     [self.navigationController setNavigationBarHidden:YES];
     
-    [self testVerticalUISlider];
+//    [self testVerticalUISlider];
 }
 
 //垂直slider
