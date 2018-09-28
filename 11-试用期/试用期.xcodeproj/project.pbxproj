@@ -34,6 +34,7 @@
 		842D1A98215E352C00CD3811 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 842D1A8A215E352C00CD3811 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		842D1A99215E352C00CD3811 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 842D1A8C215E352C00CD3811 /* View+MASAdditions.m */; };
 		842D1A9A215E352C00CD3811 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 842D1A8F215E352C00CD3811 /* ViewController+MASAdditions.m */; };
+		844BC9FB215E4A2400A71F11 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844BC9FA215E4A2400A71F11 /* SecondViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		842D1A8E215E352C00CD3811 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		842D1A8F215E352C00CD3811 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		842D1A9B215E356E00CD3811 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		844BC9F9215E4A2400A71F11 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		844BC9FA215E4A2400A71F11 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,8 @@
 				842D1A27215E070E00CD3811 /* AppDelegate.m */,
 				842D1A29215E070E00CD3811 /* ViewController.h */,
 				842D1A2A215E070E00CD3811 /* ViewController.m */,
+				844BC9F9215E4A2400A71F11 /* SecondViewController.h */,
+				844BC9FA215E4A2400A71F11 /* SecondViewController.m */,
 				842D1A58215E072500CD3811 /* ReleaseProductController.h */,
 				842D1A59215E072500CD3811 /* ReleaseProductController.m */,
 				842D1A5F215E1AB300CD3811 /* Images */,
@@ -415,6 +420,7 @@
 				842D1A6B215E24EF00CD3811 /* ZYSegmentedControl.m in Sources */,
 				842D1A93215E352C00CD3811 /* MASConstraintMaker.m in Sources */,
 				842D1A9A215E352C00CD3811 /* ViewController+MASAdditions.m in Sources */,
+				844BC9FB215E4A2400A71F11 /* SecondViewController.m in Sources */,
 				842D1A96215E352C00CD3811 /* MASViewConstraint.m in Sources */,
 				842D1A71215E336800CD3811 /* HSlider.m in Sources */,
 				842D1A95215E352C00CD3811 /* MASViewAttribute.m in Sources */,

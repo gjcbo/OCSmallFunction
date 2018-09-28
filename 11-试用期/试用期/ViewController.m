@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ReleaseProductController.h"
+#import "SecondViewController.h"
 @interface ViewController ()
 
 @end
@@ -17,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self.navigationController setNavigationBarHidden:YES];
+//    [self.navigationController setNavigationBarHidden:YES];
     
 //    [self testVerticalUISlider];
 }
@@ -42,8 +43,11 @@
 - (IBAction)releaseProductAction:(UIButton *)sender {
     NSLog(@"发布产品");
     
-    ReleaseProductController *releaseVC = [[ReleaseProductController alloc] init];
+//    ReleaseProductController *releaseVC = [[ReleaseProductController alloc] init];
+//    [self.navigationController pushViewController:releaseVC animated:YES];
     
+    SecondViewController *releaseVC = [[SecondViewController alloc] init];
     [self.navigationController pushViewController:releaseVC animated:YES];
+
 }
 @end
