@@ -16,6 +16,11 @@
 		842D1A40215E070E00CD3811 /* ___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 842D1A3F215E070E00CD3811 /* ___Tests.m */; };
 		842D1A4B215E070F00CD3811 /* ___UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 842D1A4A215E070F00CD3811 /* ___UITests.m */; };
 		842D1A5A215E072500CD3811 /* ReleaseProductController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842D1A59215E072500CD3811 /* ReleaseProductController.m */; };
+		842D1A5E215E165600CD3811 /* ScaleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 842D1A5D215E165600CD3811 /* ScaleView.m */; };
+		842D1A63215E1AB900CD3811 /* 形状-矩形.png in Resources */ = {isa = PBXBuildFile; fileRef = 842D1A60215E1AB900CD3811 /* 形状-矩形.png */; };
+		842D1A64215E1AB900CD3811 /* 圆形未选中.png in Resources */ = {isa = PBXBuildFile; fileRef = 842D1A61215E1AB900CD3811 /* 圆形未选中.png */; };
+		842D1A65215E1AB900CD3811 /* 双圆.png in Resources */ = {isa = PBXBuildFile; fileRef = 842D1A62215E1AB900CD3811 /* 双圆.png */; };
+		842D1A6B215E24EF00CD3811 /* ZYSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 842D1A6A215E24EF00CD3811 /* ZYSegmentedControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +59,13 @@
 		842D1A4C215E070F00CD3811 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		842D1A58215E072500CD3811 /* ReleaseProductController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReleaseProductController.h; sourceTree = "<group>"; };
 		842D1A59215E072500CD3811 /* ReleaseProductController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReleaseProductController.m; sourceTree = "<group>"; };
+		842D1A5C215E165600CD3811 /* ScaleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScaleView.h; sourceTree = "<group>"; };
+		842D1A5D215E165600CD3811 /* ScaleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScaleView.m; sourceTree = "<group>"; };
+		842D1A60215E1AB900CD3811 /* 形状-矩形.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "形状-矩形.png"; sourceTree = "<group>"; };
+		842D1A61215E1AB900CD3811 /* 圆形未选中.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "圆形未选中.png"; sourceTree = "<group>"; };
+		842D1A62215E1AB900CD3811 /* 双圆.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "双圆.png"; sourceTree = "<group>"; };
+		842D1A69215E24EF00CD3811 /* ZYSegmentedControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYSegmentedControl.h; sourceTree = "<group>"; };
+		842D1A6A215E24EF00CD3811 /* ZYSegmentedControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYSegmentedControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +122,8 @@
 				842D1A2A215E070E00CD3811 /* ViewController.m */,
 				842D1A58215E072500CD3811 /* ReleaseProductController.h */,
 				842D1A59215E072500CD3811 /* ReleaseProductController.m */,
+				842D1A5F215E1AB300CD3811 /* Images */,
+				842D1A5B215E15CF00CD3811 /* View */,
 				842D1A2C215E070E00CD3811 /* Main.storyboard */,
 				842D1A2F215E070E00CD3811 /* Assets.xcassets */,
 				842D1A31215E070E00CD3811 /* LaunchScreen.storyboard */,
@@ -135,6 +149,27 @@
 				842D1A4C215E070F00CD3811 /* Info.plist */,
 			);
 			path = "试用期UITests";
+			sourceTree = "<group>";
+		};
+		842D1A5B215E15CF00CD3811 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				842D1A5C215E165600CD3811 /* ScaleView.h */,
+				842D1A5D215E165600CD3811 /* ScaleView.m */,
+				842D1A69215E24EF00CD3811 /* ZYSegmentedControl.h */,
+				842D1A6A215E24EF00CD3811 /* ZYSegmentedControl.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		842D1A5F215E1AB300CD3811 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				842D1A62215E1AB900CD3811 /* 双圆.png */,
+				842D1A60215E1AB900CD3811 /* 形状-矩形.png */,
+				842D1A61215E1AB900CD3811 /* 圆形未选中.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +278,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842D1A64215E1AB900CD3811 /* 圆形未选中.png in Resources */,
+				842D1A63215E1AB900CD3811 /* 形状-矩形.png in Resources */,
 				842D1A33215E070E00CD3811 /* LaunchScreen.storyboard in Resources */,
+				842D1A65215E1AB900CD3811 /* 双圆.png in Resources */,
 				842D1A30215E070E00CD3811 /* Assets.xcassets in Resources */,
 				842D1A2E215E070E00CD3811 /* Main.storyboard in Resources */,
 			);
@@ -270,10 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842D1A5E215E165600CD3811 /* ScaleView.m in Sources */,
 				842D1A2B215E070E00CD3811 /* ViewController.m in Sources */,
 				842D1A36215E070E00CD3811 /* main.m in Sources */,
 				842D1A28215E070E00CD3811 /* AppDelegate.m in Sources */,
 				842D1A5A215E072500CD3811 /* ReleaseProductController.m in Sources */,
+				842D1A6B215E24EF00CD3811 /* ZYSegmentedControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
