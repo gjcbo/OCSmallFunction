@@ -39,7 +39,7 @@
 - (UITextView *)textView {
     if (!_textView) {
         _textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 30, kScreen_W, 50)];
-        _textView.zw_placeHolder = @"28个字符以内";
+        _textView.zw_placeHolder = @"           28个字符以内";
         _textView.zw_limitCount = 28;
         _textView.backgroundColor = UICOLOR_HEX(0XF4F4F4);
         

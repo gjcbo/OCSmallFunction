@@ -16,11 +16,21 @@
 
 //model
 #import "StepModel.h"
+//三方
+#import "TZImagePickerController.h" //图片选择器
+#import <MobileCoreServices/MobileCoreServices.h>
+
+
 
 
 #define kScreenW [UIScreen mainScreen].bounds.size.width
 #define kScreenH [UIScreen mainScreen].bounds.size.height
-@interface SecondViewController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
+@interface SecondViewController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate,
+NewHeaderViewDelegate,
+TZImagePickerControllerDelegate,
+UINavigationControllerDelegate
+>
+
 //底层的tableView
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NewHeaderView *headerVeiw;
@@ -28,9 +38,33 @@
 
 @property (nonatomic, strong) NSMutableArray *stepArrM;//步骤数组。
 @property (nonatomic, assign) NSInteger cnt;//标记步骤的个数。点击加号按钮自加初始值为1;
+
+@property (nonatomic, strong) UIImagePickerController *imagePickerVc;
+
+
 @end
 
 @implementation SecondViewController
+- (UIImagePickerController *)imagePickerVc {
+    if (_imagePickerVc == nil) {
+        _imagePickerVc = [[UIImagePickerController alloc] init];
+        _imagePickerVc.navigationBar.barTintColor = self.navigationController.navigationBar.barTintColor;
+        _imagePickerVc.navigationBar.tintColor = self.navigationController.navigationBar.tintColor;
+        UIBarButtonItem *tzBarItem, *BarItem;
+        if (@available(iOS 9, *)) {
+            tzBarItem = [UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[TZImagePickerController class]]];
+            BarItem = [UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[UIImagePickerController class]]];
+        } else {
+            tzBarItem = [UIBarButtonItem appearanceWhenContainedIn:[TZImagePickerController class], nil];
+            BarItem = [UIBarButtonItem appearanceWhenContainedIn:[UIImagePickerController class], nil];
+        }
+        NSDictionary *titleTextAttributes = [tzBarItem titleTextAttributesForState:UIControlStateNormal];
+        [BarItem setTitleTextAttributes:titleTextAttributes forState:UIControlStateNormal];
+        
+    }
+    return _imagePickerVc;
+}
+
 - (NSMutableArray *)stepArrM {
     if (!_stepArrM) {
         _stepArrM = [NSMutableArray array];
@@ -58,6 +92,7 @@
 
 - (void)setupTableView {
     self.view.backgroundColor = [UIColor whiteColor];
+    
     self.tableView.tableHeaderView = self.headerVeiw;
     self.tableView.tableFooterView = self.footerView;
     
@@ -82,6 +117,7 @@
     if (!_headerVeiw) {
 
         _headerVeiw = [[NewHeaderView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 580)];
+        _headerVeiw.delegate = self;
         _headerVeiw.headerViewBlock = ^(UIImageView *iv) {
             NSLog(@"%s--%d--%@",__FUNCTION__,__LINE__,iv);
             iv.image = [UIImage imageNamed:@"秋风萧瑟.jpg"];
@@ -196,10 +232,99 @@
     }
 }
 
+#pragma mark - NewHeaderViewDelegate
+- (void)fromPaiZhaoWithImageView:(UIImageView *)iv {
+    
+    iv.image = [UIImage imageNamed:@"秋风萧瑟.jpg"];
+    
+    [self takePhoto];
+}
+- (void)fromAlbumWithImageView:(UIImageView *)iv {
+    iv.image = [UIImage imageNamed:@"冬雪皑皑.jpg"];
+    
+    [self pushTZImagePickerController];
+}
+
+#pragma mark - 图片选择器 三方
+#pragma mark - UIImagePickerController
+
+- (void)takePhoto {
+    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    if (authStatus == AVAuthorizationStatusRestricted || authStatus == AVAuthorizationStatusDenied) {
+        // 无相机权限 做一个友好的提示
+        [self permissionAlert];
+        
+    } else if (authStatus == AVAuthorizationStatusNotDetermined) {
+        // fix issue 466, 防止用户首次拍照拒绝授权时相机页黑屏
+        [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+            if (granted) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self takePhoto];
+                });
+            }
+        }];
+        // 拍照之前还需要检查相册权限
+    } else if ([PHPhotoLibrary authorizationStatus] == 2) { // 已被拒绝，没有相册权限，将无法保存拍的照片
+        [self permissionAlert];
+        
+    } else if ([PHPhotoLibrary authorizationStatus] == 0) { // 未请求过相册权限
+        [[TZImageManager manager] requestAuthorizationWithCompletion:^{
+            [self takePhoto];
+        }];
+    } else {
+        [self pushImagePickerController];
+    }
+}
+
+//权限弹框
+- (void)permissionAlert {
+    UIAlertController *alertVc = [UIAlertController alertControllerWithTitle:@"无法使用相机" message:@"请在iPhone的""设置-隐私-相机""中允许访问相机" preferredStyle:(UIAlertControllerStyleAlert)];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:nil];
+    [alertVc addAction:cancel];
+    [self presentViewController:alertVc animated:YES completion:nil];
+}
+
+
+// 调用相机
+- (void)pushImagePickerController {
+     UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
+    if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera]) {
+        self.imagePickerVc.sourceType = sourceType;
+        NSMutableArray *mediaTypes = [NSMutableArray array];
+       
+        [mediaTypes addObject:(NSString *)kUTTypeImage];
+
+        if (mediaTypes.count) {
+            _imagePickerVc.mediaTypes = mediaTypes;
+        }
+        [self presentViewController:_imagePickerVc animated:YES completion:nil];
+    } else {
+        [JRToast showWithText:@"模拟器中无法打开照相机,请在真机中使用"];
+        NSLog(@"模拟器中无法打开照相机,请在真机中使用");
+    }
+}
+
+
+- (void)pushTZImagePickerController {
+    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc] initWithMaxImagesCount:1 columnNumber:4 delegate:self pushPhotoPickerVc:YES];
+    
+    [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
+        NSLog(@"111111111111111");
+        //跳转滤镜控制器
+        
+        UIImage *img = [photos firstObject];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.headerVeiw.iv.image = img;
+        });
+        
+    }];
+    
+    [self presentViewController:imagePickerVc animated:YES completion:nil];
+}
+
 #pragma mark - UIScrollViewDelegate 滑动后 回收键盘
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [self.tableView endEditing:YES];
 }
-
 
 @end

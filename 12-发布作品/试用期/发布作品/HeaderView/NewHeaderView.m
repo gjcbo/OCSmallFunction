@@ -11,7 +11,6 @@
 #import "SumaryView.h" // 200
 #import "ThirdStarView.h" //80
 @interface NewHeaderView()
-@property (nonatomic, strong) UIImageView *iv; // h: 200
 @property (nonatomic, strong) TitleView *titleV; //1.
 @property (nonatomic, strong) SumaryView *sumV; //2.
 @property (nonatomic, strong) ThirdStarView *starV; //3.
@@ -84,11 +83,23 @@
 - (void)selectedPicAlert {
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"选择一张封面" message:@"" preferredStyle:(UIAlertControllerStyleActionSheet)];
     UIAlertAction *paizhao = [UIAlertAction actionWithTitle:@"拍照" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
-        NSLog(@"拍照");
+        
+        
+        NSLog(@"%s----%d 拍照",__FUNCTION__,__LINE__);
+    
+        if ([self.delegate respondsToSelector:@selector(fromPaiZhaoWithImageView:)]) {
+            [self.delegate fromPaiZhaoWithImageView:self.iv];
+        }
+        
     }];
     UIAlertAction *xiangce  = [UIAlertAction actionWithTitle:@"从相册中选择" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
         NSLog(@"从相册中选择");
+        
+        if ([self.delegate respondsToSelector:@selector(fromAlbumWithImageView:)]) {
+            [self.delegate fromAlbumWithImageView:self.iv];
+        }
     }];
+    
     UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:nil];
 
     [alertVC addAction:paizhao];
