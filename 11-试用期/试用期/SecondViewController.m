@@ -17,6 +17,7 @@
 #import "SatrCell.h" //3.难度评星
 #import "CtyAndQuantityCell.h" //4.分类以及分量
 #import "FiveCell.h" //5.第五个cell 食材
+#import "SixCell.h" //6.第六个cell ，嵌套一个talbeView、
 
 #define kTitleCellId @"TitleCell"
 #define kSumaryCellId @"SumaryCell"
@@ -62,6 +63,8 @@
         [_tableView registerClass:[SatrCell class] forCellReuseIdentifier:kSatrCellId];
         [_tableView registerClass:[CtyAndQuantityCell class] forCellReuseIdentifier:kCtyAndQuantityCellId];
         [_tableView registerNib:[UINib nibWithNibName:@"FiveCell" bundle:nil] forCellReuseIdentifier:kFiveCellId];
+        [_tableView registerClass:[SixCell class] forCellReuseIdentifier:@"SixCell"];
+        
     }
     return _tableView;
 }
@@ -86,11 +89,23 @@
 }
 
 
+#pragma mark - tableView 代理方法
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    if (section == 0) { // 第 0 个分区
+        return 5;
+    }else {
+        return 3;
+    }
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
  
+    if (indexPath.section == 0) {
+        <#statements#>
+    }
     if (indexPath.row == 0) { //0.标题cell
         
         TitleCell *titleCell = [tableView dequeueReusableCellWithIdentifier:@"TitleCell"];
@@ -107,6 +122,9 @@
     }else if (indexPath.row == 4) { //4. 第五个cell
         FiveCell *fiveCell = [tableView dequeueReusableCellWithIdentifier:kFiveCellId];
         return fiveCell;
+    }else if (indexPath.row == 5) { //5. 第6个cell
+        SixCell *sixCell = [tableView dequeueReusableCellWithIdentifier:@"SixCell"];
+        return sixCell;
     }
     else {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
@@ -126,6 +144,8 @@
         return 200;
     }else if (indexPath.row == 4) {
         return 44;
+    }else if (indexPath.row == 5) { //????这个高度计算？
+        return 100;
     }
     else {
         return 44;

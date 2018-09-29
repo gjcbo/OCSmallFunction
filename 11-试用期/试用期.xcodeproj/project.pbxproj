@@ -55,6 +55,10 @@
 		846C08FC215F4BB9003BAFCA /* 食材cell.png in Resources */ = {isa = PBXBuildFile; fileRef = 846C08FB215F4BB9003BAFCA /* 食材cell.png */; };
 		846C0903215F4BF1003BAFCA /* FiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C0901215F4BF1003BAFCA /* FiveCell.m */; };
 		846C0904215F4BF1003BAFCA /* FiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846C0902215F4BF1003BAFCA /* FiveCell.xib */; };
+		846C090B215F51CA003BAFCA /* SixCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C090A215F51CA003BAFCA /* SixCell.m */; };
+		846C0912215F52CE003BAFCA /* NestStepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C0910215F52CE003BAFCA /* NestStepCell.m */; };
+		846C0913215F52CE003BAFCA /* NestStepCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846C0911215F52CE003BAFCA /* NestStepCell.xib */; };
+		846C0915215F5381003BAFCA /* 点击添加步骤.png in Resources */ = {isa = PBXBuildFile; fileRef = 846C0914215F5381003BAFCA /* 点击添加步骤.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +169,12 @@
 		846C0900215F4BF1003BAFCA /* FiveCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FiveCell.h; sourceTree = "<group>"; };
 		846C0901215F4BF1003BAFCA /* FiveCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FiveCell.m; sourceTree = "<group>"; };
 		846C0902215F4BF1003BAFCA /* FiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiveCell.xib; sourceTree = "<group>"; };
+		846C0909215F51CA003BAFCA /* SixCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SixCell.h; sourceTree = "<group>"; };
+		846C090A215F51CA003BAFCA /* SixCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SixCell.m; sourceTree = "<group>"; };
+		846C090F215F52CE003BAFCA /* NestStepCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NestStepCell.h; sourceTree = "<group>"; };
+		846C0910215F52CE003BAFCA /* NestStepCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NestStepCell.m; sourceTree = "<group>"; };
+		846C0911215F52CE003BAFCA /* NestStepCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NestStepCell.xib; sourceTree = "<group>"; };
+		846C0914215F5381003BAFCA /* 点击添加步骤.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "点击添加步骤.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +285,7 @@
 		842D1A5F215E1AB300CD3811 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				846C0914215F5381003BAFCA /* 点击添加步骤.png */,
 				846C08FB215F4BB9003BAFCA /* 食材cell.png */,
 				846C08C8215F14EC003BAFCA /* 添加收货地址.png */,
 				846C08C3215F0E42003BAFCA /* 秋风萧瑟.jpg */,
@@ -332,6 +343,7 @@
 		846C08BA215F0A35003BAFCA /* 发布作品 */ = {
 			isa = PBXGroup;
 			children = (
+				846C0908215F514B003BAFCA /* 步骤View */,
 				846C08DC215F2478003BAFCA /* Cell */,
 				846C08BB215F0A35003BAFCA /* View */,
 			);
@@ -411,6 +423,8 @@
 				846C0900215F4BF1003BAFCA /* FiveCell.h */,
 				846C0901215F4BF1003BAFCA /* FiveCell.m */,
 				846C0902215F4BF1003BAFCA /* FiveCell.xib */,
+				846C0909215F51CA003BAFCA /* SixCell.h */,
+				846C090A215F51CA003BAFCA /* SixCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -422,6 +436,16 @@
 				846C08F4215F2FAC003BAFCA /* XHStarRateView.m */,
 			);
 			path = XHStarRateView;
+			sourceTree = "<group>";
+		};
+		846C0908215F514B003BAFCA /* 步骤View */ = {
+			isa = PBXGroup;
+			children = (
+				846C090F215F52CE003BAFCA /* NestStepCell.h */,
+				846C0910215F52CE003BAFCA /* NestStepCell.m */,
+				846C0911215F52CE003BAFCA /* NestStepCell.xib */,
+			);
+			path = "步骤View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -534,10 +558,12 @@
 				846C08FC215F4BB9003BAFCA /* 食材cell.png in Resources */,
 				846C08C2215F0E17003BAFCA /* 点击添加图片.png in Resources */,
 				842D1A63215E1AB900CD3811 /* 形状-矩形.png in Resources */,
+				846C0913215F52CE003BAFCA /* NestStepCell.xib in Resources */,
 				846C08C9215F14EC003BAFCA /* 添加收货地址.png in Resources */,
 				842D1A33215E070E00CD3811 /* LaunchScreen.storyboard in Resources */,
 				846C08D9215F2281003BAFCA /* LICENSE in Resources */,
 				846C0904215F4BF1003BAFCA /* FiveCell.xib in Resources */,
+				846C0915215F5381003BAFCA /* 点击添加步骤.png in Resources */,
 				846C08E9215F27DB003BAFCA /* SumaryCell.xib in Resources */,
 				846C08DA215F2281003BAFCA /* README.md in Resources */,
 				842D1A65215E1AB900CD3811 /* 双圆.png in Resources */,
@@ -597,9 +623,11 @@
 				842D1A96215E352C00CD3811 /* MASViewConstraint.m in Sources */,
 				846C08F5215F2FAC003BAFCA /* XHStarRateView.m in Sources */,
 				846C08FA215F4804003BAFCA /* CtyAndQuantityCell.m in Sources */,
+				846C090B215F51CA003BAFCA /* SixCell.m in Sources */,
 				842D1A71215E336800CD3811 /* HSlider.m in Sources */,
 				846C08E8215F27DB003BAFCA /* SumaryCell.m in Sources */,
 				842D1A95215E352C00CD3811 /* MASViewAttribute.m in Sources */,
+				846C0912215F52CE003BAFCA /* NestStepCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
