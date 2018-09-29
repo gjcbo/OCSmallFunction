@@ -21,6 +21,8 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 
 
+//跳转滤镜控制器
+#import "ThirdViewController.h"
 
 
 #define kScreenW [UIScreen mainScreen].bounds.size.width
@@ -311,12 +313,21 @@ UINavigationControllerDelegate
     [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray *assets, BOOL isSelectOriginalPhoto) {
         NSLog(@"111111111111111");
         //跳转滤镜控制器
-        
+//
         UIImage *img = [photos firstObject];
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            self.headerVeiw.iv.image = img;
+//        });
+
         dispatch_async(dispatch_get_main_queue(), ^{
-            self.headerVeiw.iv.image = img;
+            ThirdViewController *thirdVC = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil];
+            thirdVC.img = img;
+            
+            [self presentViewController:thirdVC animated:YES completion:nil];
+            
         });
         
+       
     }];
     
     [self presentViewController:imagePickerVc animated:YES completion:nil];

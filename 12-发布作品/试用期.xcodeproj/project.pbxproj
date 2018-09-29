@@ -72,6 +72,35 @@
 		846C0957215F7AAB003BAFCA /* TZVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C0947215F7AAB003BAFCA /* TZVideoPlayerController.m */; };
 		846C0958215F7AAB003BAFCA /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C0949215F7AAB003BAFCA /* UIView+Layout.m */; };
 		846C095A215F7F88003BAFCA /* 冬雪皑皑.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 846C0959215F7F88003BAFCA /* 冬雪皑皑.jpg */; };
+		846C09A2215F92AF003BAFCA /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09A0215F92AF003BAFCA /* ThirdViewController.m */; };
+		846C09A3215F92AF003BAFCA /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846C09A1215F92AF003BAFCA /* ThirdViewController.xib */; };
+		846C09DD215F9910003BAFCA /* AlbumFilterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09A6215F9910003BAFCA /* AlbumFilterManager.m */; };
+		846C09DE215F9910003BAFCA /* AlbumFiterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09A8215F9910003BAFCA /* AlbumFiterModel.m */; };
+		846C09DF215F9910003BAFCA /* AlbumFiterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09AA215F9910003BAFCA /* AlbumFiterViewCell.m */; };
+		846C09E0215F9910003BAFCA /* GPUImage.InstagramFilter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 846C09AF215F9910003BAFCA /* GPUImage.InstagramFilter.bundle */; };
+		846C09E1215F9910003BAFCA /* IF1977Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09B1215F9910003BAFCA /* IF1977Filter.m */; };
+		846C09E2215F9910003BAFCA /* IFAmaroFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09B3215F9910003BAFCA /* IFAmaroFilter.m */; };
+		846C09E3215F9910003BAFCA /* IFBrannanFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09B5215F9910003BAFCA /* IFBrannanFilter.m */; };
+		846C09E4215F9910003BAFCA /* IFEarlybirdFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09B7215F9910003BAFCA /* IFEarlybirdFilter.m */; };
+		846C09E5215F9910003BAFCA /* IFHefeFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09B9215F9910003BAFCA /* IFHefeFilter.m */; };
+		846C09E6215F9910003BAFCA /* IFHudsonFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09BB215F9910003BAFCA /* IFHudsonFilter.m */; };
+		846C09E7215F9910003BAFCA /* IFImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09BD215F9910003BAFCA /* IFImageFilter.m */; };
+		846C09E8215F9910003BAFCA /* IFInkwellFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09BF215F9910003BAFCA /* IFInkwellFilter.m */; };
+		846C09E9215F9910003BAFCA /* IFLomofiFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09C1215F9910003BAFCA /* IFLomofiFilter.m */; };
+		846C09EA215F9910003BAFCA /* IFLordKelvinFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09C3215F9910003BAFCA /* IFLordKelvinFilter.m */; };
+		846C09EB215F9910003BAFCA /* IFNashvilleFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09C5215F9910003BAFCA /* IFNashvilleFilter.m */; };
+		846C09EC215F9910003BAFCA /* IFNormalFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09C7215F9910003BAFCA /* IFNormalFilter.m */; };
+		846C09ED215F9910003BAFCA /* IFRiseFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09C9215F9910003BAFCA /* IFRiseFilter.m */; };
+		846C09EE215F9910003BAFCA /* IFSierraFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09CB215F9910003BAFCA /* IFSierraFilter.m */; };
+		846C09EF215F9910003BAFCA /* IFSutroFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09CD215F9910003BAFCA /* IFSutroFilter.m */; };
+		846C09F0215F9910003BAFCA /* IFToasterFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09CF215F9910003BAFCA /* IFToasterFilter.m */; };
+		846C09F1215F9910003BAFCA /* IFValenciaFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09D1215F9910003BAFCA /* IFValenciaFilter.m */; };
+		846C09F2215F9910003BAFCA /* IFWaldenFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09D3215F9910003BAFCA /* IFWaldenFilter.m */; };
+		846C09F3215F9910003BAFCA /* IFXproIIFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09D5215F9910003BAFCA /* IFXproIIFilter.m */; };
+		846C09F4215F9910003BAFCA /* GPUImageFiveInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09D8215F9910003BAFCA /* GPUImageFiveInputFilter.m */; };
+		846C09F5215F9910003BAFCA /* GPUImageFourInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09DA215F9910003BAFCA /* GPUImageFourInputFilter.m */; };
+		846C09F6215F9910003BAFCA /* GPUImageSixInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09DC215F9910003BAFCA /* GPUImageSixInputFilter.m */; };
+		846C09F8215F99C1003BAFCA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C09F7215F99C0003BAFCA /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +243,64 @@
 		846C0948215F7AAB003BAFCA /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
 		846C0949215F7AAB003BAFCA /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
 		846C0959215F7F88003BAFCA /* 冬雪皑皑.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "冬雪皑皑.jpg"; sourceTree = "<group>"; };
+		846C099F215F92AF003BAFCA /* ThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		846C09A0215F92AF003BAFCA /* ThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		846C09A1215F92AF003BAFCA /* ThirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
+		846C09A5215F9910003BAFCA /* AlbumFilterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumFilterManager.h; sourceTree = "<group>"; };
+		846C09A6215F9910003BAFCA /* AlbumFilterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumFilterManager.m; sourceTree = "<group>"; };
+		846C09A7215F9910003BAFCA /* AlbumFiterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumFiterModel.h; sourceTree = "<group>"; };
+		846C09A8215F9910003BAFCA /* AlbumFiterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumFiterModel.m; sourceTree = "<group>"; };
+		846C09A9215F9910003BAFCA /* AlbumFiterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumFiterViewCell.h; sourceTree = "<group>"; };
+		846C09AA215F9910003BAFCA /* AlbumFiterViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumFiterViewCell.m; sourceTree = "<group>"; };
+		846C09AB215F9910003BAFCA /* ColorConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorConstant.h; sourceTree = "<group>"; };
+		846C09AC215F9910003BAFCA /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		846C09AF215F9910003BAFCA /* GPUImage.InstagramFilter.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GPUImage.InstagramFilter.bundle; sourceTree = "<group>"; };
+		846C09B0215F9910003BAFCA /* IF1977Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IF1977Filter.h; sourceTree = "<group>"; };
+		846C09B1215F9910003BAFCA /* IF1977Filter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IF1977Filter.m; sourceTree = "<group>"; };
+		846C09B2215F9910003BAFCA /* IFAmaroFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFAmaroFilter.h; sourceTree = "<group>"; };
+		846C09B3215F9910003BAFCA /* IFAmaroFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFAmaroFilter.m; sourceTree = "<group>"; };
+		846C09B4215F9910003BAFCA /* IFBrannanFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFBrannanFilter.h; sourceTree = "<group>"; };
+		846C09B5215F9910003BAFCA /* IFBrannanFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFBrannanFilter.m; sourceTree = "<group>"; };
+		846C09B6215F9910003BAFCA /* IFEarlybirdFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFEarlybirdFilter.h; sourceTree = "<group>"; };
+		846C09B7215F9910003BAFCA /* IFEarlybirdFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFEarlybirdFilter.m; sourceTree = "<group>"; };
+		846C09B8215F9910003BAFCA /* IFHefeFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFHefeFilter.h; sourceTree = "<group>"; };
+		846C09B9215F9910003BAFCA /* IFHefeFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFHefeFilter.m; sourceTree = "<group>"; };
+		846C09BA215F9910003BAFCA /* IFHudsonFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFHudsonFilter.h; sourceTree = "<group>"; };
+		846C09BB215F9910003BAFCA /* IFHudsonFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFHudsonFilter.m; sourceTree = "<group>"; };
+		846C09BC215F9910003BAFCA /* IFImageFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFImageFilter.h; sourceTree = "<group>"; };
+		846C09BD215F9910003BAFCA /* IFImageFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFImageFilter.m; sourceTree = "<group>"; };
+		846C09BE215F9910003BAFCA /* IFInkwellFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFInkwellFilter.h; sourceTree = "<group>"; };
+		846C09BF215F9910003BAFCA /* IFInkwellFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFInkwellFilter.m; sourceTree = "<group>"; };
+		846C09C0215F9910003BAFCA /* IFLomofiFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFLomofiFilter.h; sourceTree = "<group>"; };
+		846C09C1215F9910003BAFCA /* IFLomofiFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFLomofiFilter.m; sourceTree = "<group>"; };
+		846C09C2215F9910003BAFCA /* IFLordKelvinFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFLordKelvinFilter.h; sourceTree = "<group>"; };
+		846C09C3215F9910003BAFCA /* IFLordKelvinFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFLordKelvinFilter.m; sourceTree = "<group>"; };
+		846C09C4215F9910003BAFCA /* IFNashvilleFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFNashvilleFilter.h; sourceTree = "<group>"; };
+		846C09C5215F9910003BAFCA /* IFNashvilleFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFNashvilleFilter.m; sourceTree = "<group>"; };
+		846C09C6215F9910003BAFCA /* IFNormalFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFNormalFilter.h; sourceTree = "<group>"; };
+		846C09C7215F9910003BAFCA /* IFNormalFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFNormalFilter.m; sourceTree = "<group>"; };
+		846C09C8215F9910003BAFCA /* IFRiseFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFRiseFilter.h; sourceTree = "<group>"; };
+		846C09C9215F9910003BAFCA /* IFRiseFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFRiseFilter.m; sourceTree = "<group>"; };
+		846C09CA215F9910003BAFCA /* IFSierraFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFSierraFilter.h; sourceTree = "<group>"; };
+		846C09CB215F9910003BAFCA /* IFSierraFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFSierraFilter.m; sourceTree = "<group>"; };
+		846C09CC215F9910003BAFCA /* IFSutroFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFSutroFilter.h; sourceTree = "<group>"; };
+		846C09CD215F9910003BAFCA /* IFSutroFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFSutroFilter.m; sourceTree = "<group>"; };
+		846C09CE215F9910003BAFCA /* IFToasterFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFToasterFilter.h; sourceTree = "<group>"; };
+		846C09CF215F9910003BAFCA /* IFToasterFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFToasterFilter.m; sourceTree = "<group>"; };
+		846C09D0215F9910003BAFCA /* IFValenciaFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFValenciaFilter.h; sourceTree = "<group>"; };
+		846C09D1215F9910003BAFCA /* IFValenciaFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFValenciaFilter.m; sourceTree = "<group>"; };
+		846C09D2215F9910003BAFCA /* IFWaldenFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFWaldenFilter.h; sourceTree = "<group>"; };
+		846C09D3215F9910003BAFCA /* IFWaldenFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFWaldenFilter.m; sourceTree = "<group>"; };
+		846C09D4215F9910003BAFCA /* IFXproIIFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFXproIIFilter.h; sourceTree = "<group>"; };
+		846C09D5215F9910003BAFCA /* IFXproIIFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IFXproIIFilter.m; sourceTree = "<group>"; };
+		846C09D6215F9910003BAFCA /* InstaFilters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstaFilters.h; sourceTree = "<group>"; };
+		846C09D7215F9910003BAFCA /* GPUImageFiveInputFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageFiveInputFilter.h; sourceTree = "<group>"; };
+		846C09D8215F9910003BAFCA /* GPUImageFiveInputFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageFiveInputFilter.m; sourceTree = "<group>"; };
+		846C09D9215F9910003BAFCA /* GPUImageFourInputFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageFourInputFilter.h; sourceTree = "<group>"; };
+		846C09DA215F9910003BAFCA /* GPUImageFourInputFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageFourInputFilter.m; sourceTree = "<group>"; };
+		846C09DB215F9910003BAFCA /* GPUImageSixInputFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageSixInputFilter.h; sourceTree = "<group>"; };
+		846C09DC215F9910003BAFCA /* GPUImageSixInputFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageSixInputFilter.m; sourceTree = "<group>"; };
+		846C09F7215F99C0003BAFCA /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +331,7 @@
 		842D1A1A215E070E00CD3811 = {
 			isa = PBXGroup;
 			children = (
+				846C09F7215F99C0003BAFCA /* ViewController.m */,
 				842D1A25215E070E00CD3811 /* 试用期 */,
 				842D1A3E215E070E00CD3811 /* 试用期Tests */,
 				842D1A49215E070F00CD3811 /* 试用期UITests */,
@@ -272,6 +360,9 @@
 				842D1A2A215E070E00CD3811 /* ViewController.m */,
 				844BC9F9215E4A2400A71F11 /* SecondViewController.h */,
 				844BC9FA215E4A2400A71F11 /* SecondViewController.m */,
+				846C099F215F92AF003BAFCA /* ThirdViewController.h */,
+				846C09A0215F92AF003BAFCA /* ThirdViewController.m */,
+				846C09A1215F92AF003BAFCA /* ThirdViewController.xib */,
 				842D1A58215E072500CD3811 /* ReleaseProductController.h */,
 				842D1A59215E072500CD3811 /* ReleaseProductController.m */,
 				846C08BA215F0A35003BAFCA /* 发布作品 */,
@@ -341,6 +432,7 @@
 		842D1A74215E352300CD3811 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				846C09A4215F9910003BAFCA /* GPUImageFilter */,
 				846C092C215F7AAB003BAFCA /* TZImagePickerController */,
 				846C08F2215F2FAC003BAFCA /* XHStarRateView */,
 				846C08CA215F1BB1003BAFCA /* JRToast */,
@@ -529,6 +621,83 @@
 			path = TZImagePickerController;
 			sourceTree = "<group>";
 		};
+		846C09A4215F9910003BAFCA /* GPUImageFilter */ = {
+			isa = PBXGroup;
+			children = (
+				846C09A5215F9910003BAFCA /* AlbumFilterManager.h */,
+				846C09A6215F9910003BAFCA /* AlbumFilterManager.m */,
+				846C09A7215F9910003BAFCA /* AlbumFiterModel.h */,
+				846C09A8215F9910003BAFCA /* AlbumFiterModel.m */,
+				846C09A9215F9910003BAFCA /* AlbumFiterViewCell.h */,
+				846C09AA215F9910003BAFCA /* AlbumFiterViewCell.m */,
+				846C09AB215F9910003BAFCA /* ColorConstant.h */,
+				846C09AC215F9910003BAFCA /* Constant.h */,
+				846C09AD215F9910003BAFCA /* GPUImageFilters */,
+			);
+			path = GPUImageFilter;
+			sourceTree = "<group>";
+		};
+		846C09AD215F9910003BAFCA /* GPUImageFilters */ = {
+			isa = PBXGroup;
+			children = (
+				846C09AE215F9910003BAFCA /* Filters */,
+				846C09D7215F9910003BAFCA /* GPUImageFiveInputFilter.h */,
+				846C09D8215F9910003BAFCA /* GPUImageFiveInputFilter.m */,
+				846C09D9215F9910003BAFCA /* GPUImageFourInputFilter.h */,
+				846C09DA215F9910003BAFCA /* GPUImageFourInputFilter.m */,
+				846C09DB215F9910003BAFCA /* GPUImageSixInputFilter.h */,
+				846C09DC215F9910003BAFCA /* GPUImageSixInputFilter.m */,
+			);
+			path = GPUImageFilters;
+			sourceTree = "<group>";
+		};
+		846C09AE215F9910003BAFCA /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				846C09AF215F9910003BAFCA /* GPUImage.InstagramFilter.bundle */,
+				846C09B0215F9910003BAFCA /* IF1977Filter.h */,
+				846C09B1215F9910003BAFCA /* IF1977Filter.m */,
+				846C09B2215F9910003BAFCA /* IFAmaroFilter.h */,
+				846C09B3215F9910003BAFCA /* IFAmaroFilter.m */,
+				846C09B4215F9910003BAFCA /* IFBrannanFilter.h */,
+				846C09B5215F9910003BAFCA /* IFBrannanFilter.m */,
+				846C09B6215F9910003BAFCA /* IFEarlybirdFilter.h */,
+				846C09B7215F9910003BAFCA /* IFEarlybirdFilter.m */,
+				846C09B8215F9910003BAFCA /* IFHefeFilter.h */,
+				846C09B9215F9910003BAFCA /* IFHefeFilter.m */,
+				846C09BA215F9910003BAFCA /* IFHudsonFilter.h */,
+				846C09BB215F9910003BAFCA /* IFHudsonFilter.m */,
+				846C09BC215F9910003BAFCA /* IFImageFilter.h */,
+				846C09BD215F9910003BAFCA /* IFImageFilter.m */,
+				846C09BE215F9910003BAFCA /* IFInkwellFilter.h */,
+				846C09BF215F9910003BAFCA /* IFInkwellFilter.m */,
+				846C09C0215F9910003BAFCA /* IFLomofiFilter.h */,
+				846C09C1215F9910003BAFCA /* IFLomofiFilter.m */,
+				846C09C2215F9910003BAFCA /* IFLordKelvinFilter.h */,
+				846C09C3215F9910003BAFCA /* IFLordKelvinFilter.m */,
+				846C09C4215F9910003BAFCA /* IFNashvilleFilter.h */,
+				846C09C5215F9910003BAFCA /* IFNashvilleFilter.m */,
+				846C09C6215F9910003BAFCA /* IFNormalFilter.h */,
+				846C09C7215F9910003BAFCA /* IFNormalFilter.m */,
+				846C09C8215F9910003BAFCA /* IFRiseFilter.h */,
+				846C09C9215F9910003BAFCA /* IFRiseFilter.m */,
+				846C09CA215F9910003BAFCA /* IFSierraFilter.h */,
+				846C09CB215F9910003BAFCA /* IFSierraFilter.m */,
+				846C09CC215F9910003BAFCA /* IFSutroFilter.h */,
+				846C09CD215F9910003BAFCA /* IFSutroFilter.m */,
+				846C09CE215F9910003BAFCA /* IFToasterFilter.h */,
+				846C09CF215F9910003BAFCA /* IFToasterFilter.m */,
+				846C09D0215F9910003BAFCA /* IFValenciaFilter.h */,
+				846C09D1215F9910003BAFCA /* IFValenciaFilter.m */,
+				846C09D2215F9910003BAFCA /* IFWaldenFilter.h */,
+				846C09D3215F9910003BAFCA /* IFWaldenFilter.m */,
+				846C09D4215F9910003BAFCA /* IFXproIIFilter.h */,
+				846C09D5215F9910003BAFCA /* IFXproIIFilter.m */,
+				846C09D6215F9910003BAFCA /* InstaFilters.h */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -643,8 +812,10 @@
 				846C0913215F52CE003BAFCA /* NestStepCell.xib in Resources */,
 				846C08C9215F14EC003BAFCA /* 添加收货地址.png in Resources */,
 				842D1A33215E070E00CD3811 /* LaunchScreen.storyboard in Resources */,
+				846C09E0215F9910003BAFCA /* GPUImage.InstagramFilter.bundle in Resources */,
 				846C08D9215F2281003BAFCA /* LICENSE in Resources */,
 				846C0915215F5381003BAFCA /* 点击添加步骤.png in Resources */,
+				846C09A3215F92AF003BAFCA /* ThirdViewController.xib in Resources */,
 				846C08DA215F2281003BAFCA /* README.md in Resources */,
 				842D1A65215E1AB900CD3811 /* 双圆.png in Resources */,
 				842D1A30215E070E00CD3811 /* Assets.xcassets in Resources */,
@@ -679,23 +850,40 @@
 			files = (
 				842D1A5E215E165600CD3811 /* ScaleView.m in Sources */,
 				846C0955215F7AAB003BAFCA /* TZPhotoPreviewController.m in Sources */,
+				846C09E9215F9910003BAFCA /* IFLomofiFilter.m in Sources */,
+				846C09A2215F92AF003BAFCA /* ThirdViewController.m in Sources */,
 				842D1A2B215E070E00CD3811 /* ViewController.m in Sources */,
 				846C094B215F7AAB003BAFCA /* TZAssetCell.m in Sources */,
 				846C08D2215F2153003BAFCA /* UITextView+ZWPlaceHolder.m in Sources */,
+				846C09EE215F9910003BAFCA /* IFSierraFilter.m in Sources */,
+				846C09E1215F9910003BAFCA /* IF1977Filter.m in Sources */,
 				842D1A97215E352C00CD3811 /* NSArray+MASAdditions.m in Sources */,
+				846C09E5215F9910003BAFCA /* IFHefeFilter.m in Sources */,
 				842D1A36215E070E00CD3811 /* main.m in Sources */,
+				846C09E3215F9910003BAFCA /* IFBrannanFilter.m in Sources */,
+				846C09DE215F9910003BAFCA /* AlbumFiterModel.m in Sources */,
+				846C09EA215F9910003BAFCA /* IFLordKelvinFilter.m in Sources */,
+				846C09DD215F9910003BAFCA /* AlbumFilterManager.m in Sources */,
 				842D1A6E215E334200CD3811 /* VSlider.m in Sources */,
 				846C0956215F7AAB003BAFCA /* TZProgressView.m in Sources */,
+				846C09F8215F99C1003BAFCA /* ViewController.m in Sources */,
 				842D1A99215E352C00CD3811 /* View+MASAdditions.m in Sources */,
 				842D1A94215E352C00CD3811 /* MASLayoutConstraint.m in Sources */,
+				846C09E8215F9910003BAFCA /* IFInkwellFilter.m in Sources */,
+				846C09F5215F9910003BAFCA /* GPUImageFourInputFilter.m in Sources */,
+				846C09EC215F9910003BAFCA /* IFNormalFilter.m in Sources */,
 				846C094A215F7AAB003BAFCA /* NSBundle+TZImagePicker.m in Sources */,
+				846C09E7215F9910003BAFCA /* IFImageFilter.m in Sources */,
 				846C0954215F7AAB003BAFCA /* TZPhotoPreviewCell.m in Sources */,
+				846C09F0215F9910003BAFCA /* IFToasterFilter.m in Sources */,
 				842D1A92215E352C00CD3811 /* MASConstraint.m in Sources */,
 				842D1A98215E352C00CD3811 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				846C094D215F7AAB003BAFCA /* TZGifPhotoPreviewController.m in Sources */,
 				842D1A91215E352C00CD3811 /* MASCompositeConstraint.m in Sources */,
 				846C0952215F7AAB003BAFCA /* TZLocationManager.m in Sources */,
+				846C09F1215F9910003BAFCA /* IFValenciaFilter.m in Sources */,
 				846C091C215F5D75003BAFCA /* SumaryView.m in Sources */,
+				846C09F4215F9910003BAFCA /* GPUImageFiveInputFilter.m in Sources */,
 				846C094E215F7AAB003BAFCA /* TZImageCropManager.m in Sources */,
 				846C091F215F5E87003BAFCA /* ThirdStarView.m in Sources */,
 				842D1A28215E070E00CD3811 /* AppDelegate.m in Sources */,
@@ -705,6 +893,7 @@
 				842D1A5A215E072500CD3811 /* ReleaseProductController.m in Sources */,
 				846C08DB215F2281003BAFCA /* UITextView+ZWLimitCounter.m in Sources */,
 				846C0919215F5C52003BAFCA /* TitleView.m in Sources */,
+				846C09E4215F9910003BAFCA /* IFEarlybirdFilter.m in Sources */,
 				842D1A6B215E24EF00CD3811 /* ZYSegmentedControl.m in Sources */,
 				846C094C215F7AAB003BAFCA /* TZAssetModel.m in Sources */,
 				842D1A93215E352C00CD3811 /* MASConstraintMaker.m in Sources */,
@@ -712,16 +901,25 @@
 				846C094F215F7AAB003BAFCA /* TZImageManager.m in Sources */,
 				846C08C7215F0EF4003BAFCA /* FooterView.m in Sources */,
 				842D1A9A215E352C00CD3811 /* ViewController+MASAdditions.m in Sources */,
+				846C09F6215F9910003BAFCA /* GPUImageSixInputFilter.m in Sources */,
 				846C0953215F7AAB003BAFCA /* TZPhotoPickerController.m in Sources */,
+				846C09F3215F9910003BAFCA /* IFXproIIFilter.m in Sources */,
 				844BC9FB215E4A2400A71F11 /* SecondViewController.m in Sources */,
 				846C092B215F726D003BAFCA /* StepModel.m in Sources */,
 				842D1A96215E352C00CD3811 /* MASViewConstraint.m in Sources */,
+				846C09DF215F9910003BAFCA /* AlbumFiterViewCell.m in Sources */,
 				846C08F5215F2FAC003BAFCA /* XHStarRateView.m in Sources */,
 				842D1A71215E336800CD3811 /* HSlider.m in Sources */,
 				842D1A95215E352C00CD3811 /* MASViewAttribute.m in Sources */,
 				846C0951215F7AAB003BAFCA /* TZImagePickerController.m in Sources */,
+				846C09F2215F9910003BAFCA /* IFWaldenFilter.m in Sources */,
 				846C0922215F6086003BAFCA /* NewHeaderView.m in Sources */,
+				846C09ED215F9910003BAFCA /* IFRiseFilter.m in Sources */,
+				846C09E2215F9910003BAFCA /* IFAmaroFilter.m in Sources */,
+				846C09EF215F9910003BAFCA /* IFSutroFilter.m in Sources */,
+				846C09EB215F9910003BAFCA /* IFNashvilleFilter.m in Sources */,
 				846C0912215F52CE003BAFCA /* NestStepCell.m in Sources */,
+				846C09E6215F9910003BAFCA /* IFHudsonFilter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

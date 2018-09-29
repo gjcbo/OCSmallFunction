@@ -60,4 +60,6 @@ fastlane/test_output
 # After new code Injection tools there's a generated folder /iOSInjectionProject
 # https://github.com/johnno1962/injectionforxcode
 
+#2018-9-29 忽略pod 文件
+12-发布作品/Pods/
 iOSInjectionProject/
