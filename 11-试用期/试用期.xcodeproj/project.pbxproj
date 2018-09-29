@@ -35,6 +35,26 @@
 		842D1A99215E352C00CD3811 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 842D1A8C215E352C00CD3811 /* View+MASAdditions.m */; };
 		842D1A9A215E352C00CD3811 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 842D1A8F215E352C00CD3811 /* ViewController+MASAdditions.m */; };
 		844BC9FB215E4A2400A71F11 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844BC9FA215E4A2400A71F11 /* SecondViewController.m */; };
+		846C08BE215F0A46003BAFCA /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C08BD215F0A46003BAFCA /* HeaderView.m */; };
+		846C08C2215F0E17003BAFCA /* 点击添加图片.png in Resources */ = {isa = PBXBuildFile; fileRef = 846C08C1215F0E16003BAFCA /* 点击添加图片.png */; };
+		846C08C4215F0E42003BAFCA /* 秋风萧瑟.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 846C08C3215F0E42003BAFCA /* 秋风萧瑟.jpg */; };
+		846C08C7215F0EF4003BAFCA /* FooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C08C6215F0EF4003BAFCA /* FooterView.m */; };
+		846C08C9215F14EC003BAFCA /* 添加收货地址.png in Resources */ = {isa = PBXBuildFile; fileRef = 846C08C8215F14EC003BAFCA /* 添加收货地址.png */; };
+		846C08CD215F1BB9003BAFCA /* JRToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C08CB215F1BB9003BAFCA /* JRToast.m */; };
+		846C08D2215F2153003BAFCA /* UITextView+ZWPlaceHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C08D1215F2152003BAFCA /* UITextView+ZWPlaceHolder.m */; };
+		846C08D9215F2281003BAFCA /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 846C08D4215F2281003BAFCA /* LICENSE */; };
+		846C08DA215F2281003BAFCA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 846C08D5215F2281003BAFCA /* README.md */; };
+		846C08DB215F2281003BAFCA /* UITextView+ZWLimitCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C08D8215F2281003BAFCA /* UITextView+ZWLimitCounter.m */; };
+		846C08E3215F2497003BAFCA /* TitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C08E1215F2497003BAFCA /* TitleCell.m */; };
+		846C08E4215F2497003BAFCA /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846C08E2215F2497003BAFCA /* TitleCell.xib */; };
+		846C08E8215F27DB003BAFCA /* SumaryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C08E6215F27DB003BAFCA /* SumaryCell.m */; };
+		846C08E9215F27DB003BAFCA /* SumaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846C08E7215F27DB003BAFCA /* SumaryCell.xib */; };
+		846C08F1215F2F14003BAFCA /* SatrCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C08F0215F2F14003BAFCA /* SatrCell.m */; };
+		846C08F5215F2FAC003BAFCA /* XHStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C08F4215F2FAC003BAFCA /* XHStarRateView.m */; };
+		846C08FA215F4804003BAFCA /* CtyAndQuantityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C08F9215F4804003BAFCA /* CtyAndQuantityCell.m */; };
+		846C08FC215F4BB9003BAFCA /* 食材cell.png in Resources */ = {isa = PBXBuildFile; fileRef = 846C08FB215F4BB9003BAFCA /* 食材cell.png */; };
+		846C0903215F4BF1003BAFCA /* FiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C0901215F4BF1003BAFCA /* FiveCell.m */; };
+		846C0904215F4BF1003BAFCA /* FiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846C0902215F4BF1003BAFCA /* FiveCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +133,38 @@
 		842D1A9B215E356E00CD3811 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		844BC9F9215E4A2400A71F11 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		844BC9FA215E4A2400A71F11 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		846C08BC215F0A46003BAFCA /* HeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		846C08BD215F0A46003BAFCA /* HeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		846C08C1215F0E16003BAFCA /* 点击添加图片.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "点击添加图片.png"; sourceTree = "<group>"; };
+		846C08C3215F0E42003BAFCA /* 秋风萧瑟.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "秋风萧瑟.jpg"; sourceTree = "<group>"; };
+		846C08C5215F0EF4003BAFCA /* FooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FooterView.h; sourceTree = "<group>"; };
+		846C08C6215F0EF4003BAFCA /* FooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FooterView.m; sourceTree = "<group>"; };
+		846C08C8215F14EC003BAFCA /* 添加收货地址.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "添加收货地址.png"; sourceTree = "<group>"; };
+		846C08CB215F1BB9003BAFCA /* JRToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRToast.m; sourceTree = "<group>"; };
+		846C08CC215F1BB9003BAFCA /* JRToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRToast.h; sourceTree = "<group>"; };
+		846C08D0215F2152003BAFCA /* UITextView+ZWPlaceHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+ZWPlaceHolder.h"; sourceTree = "<group>"; };
+		846C08D1215F2152003BAFCA /* UITextView+ZWPlaceHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+ZWPlaceHolder.m"; sourceTree = "<group>"; };
+		846C08D4215F2281003BAFCA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		846C08D5215F2281003BAFCA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		846C08D7215F2281003BAFCA /* UITextView+ZWLimitCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+ZWLimitCounter.h"; sourceTree = "<group>"; };
+		846C08D8215F2281003BAFCA /* UITextView+ZWLimitCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+ZWLimitCounter.m"; sourceTree = "<group>"; };
+		846C08E0215F2497003BAFCA /* TitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleCell.h; sourceTree = "<group>"; };
+		846C08E1215F2497003BAFCA /* TitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleCell.m; sourceTree = "<group>"; };
+		846C08E2215F2497003BAFCA /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
+		846C08E5215F27DB003BAFCA /* SumaryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SumaryCell.h; sourceTree = "<group>"; };
+		846C08E6215F27DB003BAFCA /* SumaryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SumaryCell.m; sourceTree = "<group>"; };
+		846C08E7215F27DB003BAFCA /* SumaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SumaryCell.xib; sourceTree = "<group>"; };
+		846C08EF215F2F14003BAFCA /* SatrCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SatrCell.h; sourceTree = "<group>"; };
+		846C08F0215F2F14003BAFCA /* SatrCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SatrCell.m; sourceTree = "<group>"; };
+		846C08F3215F2FAC003BAFCA /* XHStarRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHStarRateView.h; sourceTree = "<group>"; };
+		846C08F4215F2FAC003BAFCA /* XHStarRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHStarRateView.m; sourceTree = "<group>"; };
+		846C08F7215F45BA003BAFCA /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
+		846C08F8215F4804003BAFCA /* CtyAndQuantityCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CtyAndQuantityCell.h; sourceTree = "<group>"; };
+		846C08F9215F4804003BAFCA /* CtyAndQuantityCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CtyAndQuantityCell.m; sourceTree = "<group>"; };
+		846C08FB215F4BB9003BAFCA /* 食材cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "食材cell.png"; sourceTree = "<group>"; };
+		846C0900215F4BF1003BAFCA /* FiveCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FiveCell.h; sourceTree = "<group>"; };
+		846C0901215F4BF1003BAFCA /* FiveCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FiveCell.m; sourceTree = "<group>"; };
+		846C0902215F4BF1003BAFCA /* FiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiveCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +215,7 @@
 		842D1A25215E070E00CD3811 /* 试用期 */ = {
 			isa = PBXGroup;
 			children = (
+				846C08CE215F2148003BAFCA /* Category */,
 				842D1A74215E352300CD3811 /* Vendors */,
 				842D1A26215E070E00CD3811 /* AppDelegate.h */,
 				842D1A27215E070E00CD3811 /* AppDelegate.m */,
@@ -172,6 +225,7 @@
 				844BC9FA215E4A2400A71F11 /* SecondViewController.m */,
 				842D1A58215E072500CD3811 /* ReleaseProductController.h */,
 				842D1A59215E072500CD3811 /* ReleaseProductController.m */,
+				846C08BA215F0A35003BAFCA /* 发布作品 */,
 				842D1A5F215E1AB300CD3811 /* Images */,
 				842D1A5B215E15CF00CD3811 /* View */,
 				842D1A2C215E070E00CD3811 /* Main.storyboard */,
@@ -180,6 +234,7 @@
 				842D1A34215E070E00CD3811 /* Info.plist */,
 				842D1A35215E070E00CD3811 /* main.m */,
 				842D1A9B215E356E00CD3811 /* PrefixHeader.pch */,
+				846C08F7215F45BA003BAFCA /* Const.h */,
 			);
 			path = "试用期";
 			sourceTree = "<group>";
@@ -220,6 +275,10 @@
 		842D1A5F215E1AB300CD3811 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				846C08FB215F4BB9003BAFCA /* 食材cell.png */,
+				846C08C8215F14EC003BAFCA /* 添加收货地址.png */,
+				846C08C3215F0E42003BAFCA /* 秋风萧瑟.jpg */,
+				846C08C1215F0E16003BAFCA /* 点击添加图片.png */,
 				842D1A62215E1AB900CD3811 /* 双圆.png */,
 				842D1A60215E1AB900CD3811 /* 形状-矩形.png */,
 				842D1A61215E1AB900CD3811 /* 圆形未选中.png */,
@@ -230,6 +289,8 @@
 		842D1A74215E352300CD3811 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
+				846C08F2215F2FAC003BAFCA /* XHStarRateView */,
+				846C08CA215F1BB1003BAFCA /* JRToast */,
 				842D1A75215E352C00CD3811 /* Masonry */,
 			);
 			path = Vendors;
@@ -266,6 +327,101 @@
 				842D1A8F215E352C00CD3811 /* ViewController+MASAdditions.m */,
 			);
 			path = Masonry;
+			sourceTree = "<group>";
+		};
+		846C08BA215F0A35003BAFCA /* 发布作品 */ = {
+			isa = PBXGroup;
+			children = (
+				846C08DC215F2478003BAFCA /* Cell */,
+				846C08BB215F0A35003BAFCA /* View */,
+			);
+			path = "发布作品";
+			sourceTree = "<group>";
+		};
+		846C08BB215F0A35003BAFCA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				846C08BC215F0A46003BAFCA /* HeaderView.h */,
+				846C08BD215F0A46003BAFCA /* HeaderView.m */,
+				846C08C5215F0EF4003BAFCA /* FooterView.h */,
+				846C08C6215F0EF4003BAFCA /* FooterView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		846C08CA215F1BB1003BAFCA /* JRToast */ = {
+			isa = PBXGroup;
+			children = (
+				846C08CC215F1BB9003BAFCA /* JRToast.h */,
+				846C08CB215F1BB9003BAFCA /* JRToast.m */,
+			);
+			path = JRToast;
+			sourceTree = "<group>";
+		};
+		846C08CE215F2148003BAFCA /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				846C08D3215F2281003BAFCA /* ZWLimitCounter */,
+				846C08CF215F2152003BAFCA /* ZWPlaceHolder */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		846C08CF215F2152003BAFCA /* ZWPlaceHolder */ = {
+			isa = PBXGroup;
+			children = (
+				846C08D0215F2152003BAFCA /* UITextView+ZWPlaceHolder.h */,
+				846C08D1215F2152003BAFCA /* UITextView+ZWPlaceHolder.m */,
+			);
+			path = ZWPlaceHolder;
+			sourceTree = "<group>";
+		};
+		846C08D3215F2281003BAFCA /* ZWLimitCounter */ = {
+			isa = PBXGroup;
+			children = (
+				846C08D4215F2281003BAFCA /* LICENSE */,
+				846C08D5215F2281003BAFCA /* README.md */,
+				846C08D6215F2281003BAFCA /* ZWLimitCounter */,
+			);
+			path = ZWLimitCounter;
+			sourceTree = "<group>";
+		};
+		846C08D6215F2281003BAFCA /* ZWLimitCounter */ = {
+			isa = PBXGroup;
+			children = (
+				846C08D7215F2281003BAFCA /* UITextView+ZWLimitCounter.h */,
+				846C08D8215F2281003BAFCA /* UITextView+ZWLimitCounter.m */,
+			);
+			path = ZWLimitCounter;
+			sourceTree = "<group>";
+		};
+		846C08DC215F2478003BAFCA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				846C08E0215F2497003BAFCA /* TitleCell.h */,
+				846C08E1215F2497003BAFCA /* TitleCell.m */,
+				846C08E2215F2497003BAFCA /* TitleCell.xib */,
+				846C08E5215F27DB003BAFCA /* SumaryCell.h */,
+				846C08E6215F27DB003BAFCA /* SumaryCell.m */,
+				846C08E7215F27DB003BAFCA /* SumaryCell.xib */,
+				846C08EF215F2F14003BAFCA /* SatrCell.h */,
+				846C08F0215F2F14003BAFCA /* SatrCell.m */,
+				846C08F8215F4804003BAFCA /* CtyAndQuantityCell.h */,
+				846C08F9215F4804003BAFCA /* CtyAndQuantityCell.m */,
+				846C0900215F4BF1003BAFCA /* FiveCell.h */,
+				846C0901215F4BF1003BAFCA /* FiveCell.m */,
+				846C0902215F4BF1003BAFCA /* FiveCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		846C08F2215F2FAC003BAFCA /* XHStarRateView */ = {
+			isa = PBXGroup;
+			children = (
+				846C08F3215F2FAC003BAFCA /* XHStarRateView.h */,
+				846C08F4215F2FAC003BAFCA /* XHStarRateView.m */,
+			);
+			path = XHStarRateView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,10 +531,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				842D1A64215E1AB900CD3811 /* 圆形未选中.png in Resources */,
+				846C08FC215F4BB9003BAFCA /* 食材cell.png in Resources */,
+				846C08C2215F0E17003BAFCA /* 点击添加图片.png in Resources */,
 				842D1A63215E1AB900CD3811 /* 形状-矩形.png in Resources */,
+				846C08C9215F14EC003BAFCA /* 添加收货地址.png in Resources */,
 				842D1A33215E070E00CD3811 /* LaunchScreen.storyboard in Resources */,
+				846C08D9215F2281003BAFCA /* LICENSE in Resources */,
+				846C0904215F4BF1003BAFCA /* FiveCell.xib in Resources */,
+				846C08E9215F27DB003BAFCA /* SumaryCell.xib in Resources */,
+				846C08DA215F2281003BAFCA /* README.md in Resources */,
 				842D1A65215E1AB900CD3811 /* 双圆.png in Resources */,
 				842D1A30215E070E00CD3811 /* Assets.xcassets in Resources */,
+				846C08E4215F2497003BAFCA /* TitleCell.xib in Resources */,
+				846C08C4215F0E42003BAFCA /* 秋风萧瑟.jpg in Resources */,
 				842D1A2E215E070E00CD3811 /* Main.storyboard in Resources */,
 				842D1A90215E352C00CD3811 /* Info.plist in Resources */,
 			);
@@ -407,22 +572,33 @@
 			files = (
 				842D1A5E215E165600CD3811 /* ScaleView.m in Sources */,
 				842D1A2B215E070E00CD3811 /* ViewController.m in Sources */,
+				846C08D2215F2153003BAFCA /* UITextView+ZWPlaceHolder.m in Sources */,
 				842D1A97215E352C00CD3811 /* NSArray+MASAdditions.m in Sources */,
 				842D1A36215E070E00CD3811 /* main.m in Sources */,
 				842D1A6E215E334200CD3811 /* VSlider.m in Sources */,
 				842D1A99215E352C00CD3811 /* View+MASAdditions.m in Sources */,
+				846C08E3215F2497003BAFCA /* TitleCell.m in Sources */,
 				842D1A94215E352C00CD3811 /* MASLayoutConstraint.m in Sources */,
 				842D1A92215E352C00CD3811 /* MASConstraint.m in Sources */,
 				842D1A98215E352C00CD3811 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				842D1A91215E352C00CD3811 /* MASCompositeConstraint.m in Sources */,
 				842D1A28215E070E00CD3811 /* AppDelegate.m in Sources */,
+				846C08CD215F1BB9003BAFCA /* JRToast.m in Sources */,
+				846C08BE215F0A46003BAFCA /* HeaderView.m in Sources */,
+				846C0903215F4BF1003BAFCA /* FiveCell.m in Sources */,
 				842D1A5A215E072500CD3811 /* ReleaseProductController.m in Sources */,
+				846C08DB215F2281003BAFCA /* UITextView+ZWLimitCounter.m in Sources */,
 				842D1A6B215E24EF00CD3811 /* ZYSegmentedControl.m in Sources */,
 				842D1A93215E352C00CD3811 /* MASConstraintMaker.m in Sources */,
+				846C08C7215F0EF4003BAFCA /* FooterView.m in Sources */,
+				846C08F1215F2F14003BAFCA /* SatrCell.m in Sources */,
 				842D1A9A215E352C00CD3811 /* ViewController+MASAdditions.m in Sources */,
 				844BC9FB215E4A2400A71F11 /* SecondViewController.m in Sources */,
 				842D1A96215E352C00CD3811 /* MASViewConstraint.m in Sources */,
+				846C08F5215F2FAC003BAFCA /* XHStarRateView.m in Sources */,
+				846C08FA215F4804003BAFCA /* CtyAndQuantityCell.m in Sources */,
 				842D1A71215E336800CD3811 /* HSlider.m in Sources */,
+				846C08E8215F27DB003BAFCA /* SumaryCell.m in Sources */,
 				842D1A95215E352C00CD3811 /* MASViewAttribute.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

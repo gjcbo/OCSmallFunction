@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ReleaseProductController.h"
 #import "SecondViewController.h"
+
 @interface ViewController ()
 
 @end
@@ -17,11 +18,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-//    [self.navigationController setNavigationBarHidden:YES];
+//    UITextView *textView = [[UITextView alloc] initWithFrame:CGRectMake(10, 100, self.view.bounds.size.width - 20, 300)];
+//    [self.view addSubview:textView];
+//    textView.font = [UIFont systemFontOfSize:18.0];
+//    textView.zw_placeHolder = @"对这个作品有什么想介绍或补充的吗?";
+//    textView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+//    textView.layer.borderWidth = 1;
+//    textView.zw_limitCount = 500;
+    NSLog(@"屏幕宽:%f--屏幕高:%f",kScreen_W,kScreen_H);
     
-//    [self testVerticalUISlider];
 }
+
+
 
 //垂直slider
 - (void)testVerticalUISlider {
