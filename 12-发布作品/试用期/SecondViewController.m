@@ -14,6 +14,9 @@
 //Cell
 #import "NestStepCell.h"
 
+//model
+#import "StepModel.h"
+
 
 #define kScreenW [UIScreen mainScreen].bounds.size.width
 #define kScreenH [UIScreen mainScreen].bounds.size.height
@@ -23,21 +26,44 @@
 @property (nonatomic, strong) NewHeaderView *headerVeiw;
 @property (nonatomic, strong) FooterView *footerView;
 
-
+@property (nonatomic, strong) NSMutableArray *stepArrM;//步骤数组。
+@property (nonatomic, assign) NSInteger cnt;//标记步骤的个数。点击加号按钮自加初始值为1;
 @end
 
 @implementation SecondViewController
+- (NSMutableArray *)stepArrM {
+    if (!_stepArrM) {
+        _stepArrM = [NSMutableArray array];
+    }
+    return _stepArrM;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"发布产品";
+  
+    [self setupTableView]; //
+    
+    //初始化数组
+    [self setupDataArray];
+    _cnt = 1 ;//初始值为1
+}
+
+- (void)setupDataArray {
+    StepModel *model1 = [[StepModel alloc] init];
+    model1.name = @"步骤1";
+    [self.stepArrM addObject:model1];
+}
+
+- (void)setupTableView {
     self.view.backgroundColor = [UIColor whiteColor];
     self.tableView.tableHeaderView = self.headerVeiw;
     self.tableView.tableFooterView = self.footerView;
     
     [self.view addSubview:self.tableView];
 }
+
 - (UITableView *)tableView {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:(UITableViewStylePlain)];
@@ -78,10 +104,10 @@
     return 2; //食材 + 步骤
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0) {
+    if (section == 0) { //
         return 1;
-    }else if (section == 1) {
-        return 3;
+    }else if (section == 1) { //步骤cell 个数
+        return self.stepArrM.count;
     }
     else {
         return 1;
@@ -91,9 +117,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 1) { //步骤
         
-        NestStepCell *setpCell = [tableView dequeueReusableCellWithIdentifier:@"NestStepCell"];
-        return setpCell;
+        NestStepCell *stepCell = [tableView dequeueReusableCellWithIdentifier:@"NestStepCell"];
         
+        //取出模型
+        StepModel *model = self.stepArrM[indexPath.row];
+        stepCell.stepLb.text = model.name;
+        return stepCell;
     }else {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellId"];
         cell.textLabel.text = [NSString stringWithFormat:@"%ld--%ld",indexPath.section, indexPath.row];
@@ -129,16 +158,34 @@
         UITableViewHeaderFooterView *footV1 = [tableView dequeueReusableHeaderFooterViewWithIdentifier:identy];
         if (!footV1) {
             footV1 = [[UITableViewHeaderFooterView alloc] initWithReuseIdentifier:identy];
-            UIView *redView = [[UIView alloc] initWithFrame:CGRectMake(50, 10, 100, 30)];
-            redView.center = self.view.center;
-            redView.backgroundColor = [UIColor redColor];
-            [footV1 addSubview:redView];
+            UIButton *addBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+            [addBtn setImage:[UIImage imageNamed:@"加号2-fill.png"] forState:(UIControlStateNormal)];
+            CGFloat x = (kScreenW - 30)*0.5;
+            addBtn.frame = CGRectMake(x, 0, 40, 40);
+            [addBtn addTarget:self action:@selector(addBtnAction:) forControlEvents:(UIControlEventTouchUpInside)];
+            [footV1 addSubview:addBtn];
         }
         return footV1;
         
     }else {
         return nil;
     }
+}
+
+#pragma mark - 添加
+//添加cell
+- (void)addBtnAction:(UIButton *)btn {
+    NSLog(@"添加按钮");
+    _cnt++;
+    //创建步骤模型
+    StepModel *newModel = [[StepModel alloc] init];
+    newModel.name = [NSString stringWithFormat:@"步骤%ld:",_cnt];
+    
+    //添加到数据源数组中
+    [self.stepArrM addObject:newModel];
+    
+    //刷新表格
+    [self.tableView reloadData];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {

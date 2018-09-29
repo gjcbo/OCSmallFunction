@@ -57,6 +57,7 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="iv" destination="PlC-cz-I2a" id="MSf-do-yHl"/>
+                <outlet property="stepLb" destination="Eeq-7O-QCT" id="7A4-2H-nSt"/>
                 <outlet property="tv" destination="ugf-fP-7W2" id="5TO-Gk-esG"/>
             </connections>
         </tableViewCell>

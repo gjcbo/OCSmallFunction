@@ -10,4 +10,7 @@
 
 @interface NestStepCell : UITableViewCell
 
+/**步骤*/
+@property (weak, nonatomic) IBOutlet UILabel *stepLb;
+
 @end

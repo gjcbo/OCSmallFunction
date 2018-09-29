@@ -54,6 +54,8 @@
 		846C091C215F5D75003BAFCA /* SumaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C091B215F5D75003BAFCA /* SumaryView.m */; };
 		846C091F215F5E87003BAFCA /* ThirdStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C091E215F5E87003BAFCA /* ThirdStarView.m */; };
 		846C0922215F6086003BAFCA /* NewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C0921215F6086003BAFCA /* NewHeaderView.m */; };
+		846C0924215F7124003BAFCA /* 加号2-fill.png in Resources */ = {isa = PBXBuildFile; fileRef = 846C0923215F7124003BAFCA /* 加号2-fill.png */; };
+		846C092B215F726D003BAFCA /* StepModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 846C092A215F726D003BAFCA /* StepModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +165,9 @@
 		846C091E215F5E87003BAFCA /* ThirdStarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdStarView.m; sourceTree = "<group>"; };
 		846C0920215F6086003BAFCA /* NewHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewHeaderView.h; sourceTree = "<group>"; };
 		846C0921215F6086003BAFCA /* NewHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewHeaderView.m; sourceTree = "<group>"; };
+		846C0923215F7124003BAFCA /* 加号2-fill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "加号2-fill.png"; sourceTree = "<group>"; };
+		846C0929215F726D003BAFCA /* StepModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StepModel.h; sourceTree = "<group>"; };
+		846C092A215F726D003BAFCA /* StepModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StepModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +278,7 @@
 		842D1A5F215E1AB300CD3811 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				846C0923215F7124003BAFCA /* 加号2-fill.png */,
 				846C0914215F5381003BAFCA /* 点击添加步骤.png */,
 				846C08FB215F4BB9003BAFCA /* 食材cell.png */,
 				846C08C8215F14EC003BAFCA /* 添加收货地址.png */,
@@ -331,6 +337,7 @@
 		846C08BA215F0A35003BAFCA /* 发布作品 */ = {
 			isa = PBXGroup;
 			children = (
+				846C0928215F7264003BAFCA /* Model */,
 				846C0916215F5C46003BAFCA /* HeaderView */,
 				846C0908215F514B003BAFCA /* 步骤View */,
 				846C08BB215F0A35003BAFCA /* View */,
@@ -427,6 +434,15 @@
 				846C0921215F6086003BAFCA /* NewHeaderView.m */,
 			);
 			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		846C0928215F7264003BAFCA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				846C0929215F726D003BAFCA /* StepModel.h */,
+				846C092A215F726D003BAFCA /* StepModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -547,6 +563,7 @@
 				846C08DA215F2281003BAFCA /* README.md in Resources */,
 				842D1A65215E1AB900CD3811 /* 双圆.png in Resources */,
 				842D1A30215E070E00CD3811 /* Assets.xcassets in Resources */,
+				846C0924215F7124003BAFCA /* 加号2-fill.png in Resources */,
 				846C08C4215F0E42003BAFCA /* 秋风萧瑟.jpg in Resources */,
 				842D1A2E215E070E00CD3811 /* Main.storyboard in Resources */,
 				842D1A90215E352C00CD3811 /* Info.plist in Resources */,
@@ -598,6 +615,7 @@
 				846C08C7215F0EF4003BAFCA /* FooterView.m in Sources */,
 				842D1A9A215E352C00CD3811 /* ViewController+MASAdditions.m in Sources */,
 				844BC9FB215E4A2400A71F11 /* SecondViewController.m in Sources */,
+				846C092B215F726D003BAFCA /* StepModel.m in Sources */,
 				842D1A96215E352C00CD3811 /* MASViewConstraint.m in Sources */,
 				846C08F5215F2FAC003BAFCA /* XHStarRateView.m in Sources */,
 				842D1A71215E336800CD3811 /* HSlider.m in Sources */,

@@ -93,9 +93,12 @@
 #pragma mark - 点击事件
 - (void)publicBtnAction:(UIButton *)btn {
     NSLog(@"%s--%d",__FUNCTION__,__LINE__);
+    [JRToast showWithText:@"发布"];
+
 }
 - (void)savaDraftAction:(UIButton *)btn {
     NSLog(@"%s--%d",__FUNCTION__,__LINE__);
+    [JRToast showWithText:@"保存到草稿"];
 }
 
 - (void)addAddressAction {
