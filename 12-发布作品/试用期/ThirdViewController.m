@@ -154,7 +154,7 @@ static NSString * const reuseIdentifier = @"AlbumFiterViewCellIdentifier";
         [flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
         flowLayout.minimumInteritemSpacing = 12;
         flowLayout.minimumLineSpacing = 12;
-        CGFloat y = kScreen_W - 120;
+        CGFloat y = kScreen_H - 120;
         CGFloat clvHeight = 100;
         CGRect frame = CGRectMake(0, y, kScreen_W, clvHeight);
         _clv = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:flowLayout];

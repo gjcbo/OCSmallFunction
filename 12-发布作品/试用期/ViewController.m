@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ReleaseProductController.h"
 #import "SecondViewController.h"
+#import "FourViewController.h"
 
 @interface ViewController ()
 
@@ -27,6 +28,11 @@
 //    textView.zw_limitCount = 500;
     NSLog(@"屏幕宽:%f--屏幕高:%f",kScreen_W,kScreen_H);
     
+    UIButton *btn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    btn.frame = CGRectMake(10, 100, 200, 30);
+    [btn setImage:[UIImage imageNamed:@"上下.png"] forState:(UIControlStateNormal)];
+    
+    [self.view addSubview:btn];
 }
 
 
@@ -56,6 +62,13 @@
     
     SecondViewController *releaseVC = [[SecondViewController alloc] init];
     [self.navigationController pushViewController:releaseVC animated:YES];
+}
 
+- (IBAction)testAction:(UIButton *)sender {
+    NSLog(@"%s--%d",__FUNCTION__,__LINE__);
+    
+    FourViewController *fourVC = [[FourViewController alloc] init];
+    
+    [self presentViewController:fourVC animated:YES completion:nil];
 }
 @end
