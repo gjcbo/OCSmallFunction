@@ -71,4 +71,12 @@
     
     [self presentViewController:fourVC animated:YES completion:nil];
 }
+
+
+- (IBAction)testScaleViewAction:(UIButton *)sender {
+        ReleaseProductController *releaseVC = [[ReleaseProductController alloc] init];
+        [self.navigationController pushViewController:releaseVC animated:YES];
+}
+
+
 @end

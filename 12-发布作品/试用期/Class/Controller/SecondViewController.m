@@ -9,6 +9,8 @@
 
 
 #import "SecondViewController.h"
+//VC
+#import "FiveViewController.h" //缩放view
 //View
 #import "NewHeaderView.h"
 #import "FooterView.h"
@@ -127,6 +129,16 @@ UINavigationControllerDelegate
             iv.image = [UIImage imageNamed:@"秋风萧瑟.jpg"];
         };
     }
+    
+    //跳转控制器。跳转到缩放视图界面。
+    __weak typeof(self) weakSelf = self;
+    _headerVeiw.newHeaderViewClickRectBlock = ^{
+        FiveViewController *fiveVC = [[FiveViewController alloc] init];
+        
+        [weakSelf presentViewController:fiveVC animated:YES completion:nil];
+    };
+    
+    
     return _headerVeiw;
 }
 

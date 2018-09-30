@@ -1,5 +1,5 @@
 //
-//  CtyAndCntView.h
+//  FiveViewController.h
 //  试用期
 //
 //  Created by Yasin on 2018/9/30.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CtyAndCntView : UIView
-@property (nonatomic, copy) void(^ctyAndCntViewClickRectBlock)(void);
+@interface FiveViewController : UIViewController
 
 @end

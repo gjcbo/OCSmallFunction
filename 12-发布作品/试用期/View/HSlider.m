@@ -66,6 +66,10 @@
     if (self.hSliderBlock) {
         self.hSliderBlock(slider);
     }
+    
+    if ([self.delegate respondsToSelector:@selector(hSliderDidChangeValue:)]) {
+        [self.delegate hSliderDidChangeValue:slider.value];
+    }
 }
 
 @end

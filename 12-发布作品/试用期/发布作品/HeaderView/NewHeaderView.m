@@ -74,20 +74,21 @@
 - (CtyAndCntView *)ctyAndCntView {
     if (!_ctyAndCntView) {
         _ctyAndCntView = [[CtyAndCntView alloc] initWithFrame:CGRectMake(0, 550, kScreen_W, 200)];
+        
+        //事件传递第三层
+        __weak typeof(self) weakSelf = self;
+        _ctyAndCntView.ctyAndCntViewClickRectBlock = ^{
+            if (weakSelf.newHeaderViewClickRectBlock) {
+                weakSelf.newHeaderViewClickRectBlock();
+            }
+        };
     }
     return _ctyAndCntView;
 }
 
-
-
 #pragma mark  - 事件监听
 - (void)tapImgAction {
-    //    NSLog(@"%s--%d",__func__,__LINE__);
-    //回调
-//    if (self.headerViewBlock) {
-//        self.headerViewBlock(_iv);
-//    }
-    
+    NSLog(@"%s--%d",__func__,__LINE__);
     [self selectedPicAlert];
 }
 

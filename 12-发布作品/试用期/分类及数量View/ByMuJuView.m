@@ -85,6 +85,11 @@
 - (void)rectBtnAction:(UIButton *)btn {
     NSLog(@"方形 %s---%d",__FUNCTION__, __LINE__);
     [JRToast showWithText:@"ByMuJuView:方形"];
+    
+    //第一次：事件回调机制。传递出去
+    if (self.byMuJuViewClickRectBlock) {
+        self.byMuJuViewClickRectBlock();
+    }
 }
 
 - (void)circleBtnAction:(UIButton *)btn {

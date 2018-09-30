@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol HSliderDelegate <NSObject>
+- (void)hSliderDidChangeValue:(CGFloat)value;
+@end
+
 @interface HSlider : UIView
 @property (nonatomic, copy)void(^hSliderBlock)(UISlider *slider);
 @property (nonatomic, strong) UILabel *hLb;//水平方向的lb
 
+@property (nonatomic, weak) id <HSliderDelegate>delegate;
 @end

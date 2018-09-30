@@ -65,6 +65,11 @@
     if (self.vSliderBlock) {
         self.vSliderBlock(slider);
     }
+    
+    //9-30 
+    if ([self.delegate respondsToSelector:@selector(vSliderChangedValue:)]) {
+        [self.delegate vSliderChangedValue:slider.value];
+    }
 }
 
 @end

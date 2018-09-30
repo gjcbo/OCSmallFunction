@@ -102,7 +102,15 @@
 - (ByMuJuView *)mujuView {
     if (!_mujuView) {
         _mujuView = [[ByMuJuView alloc] init];
-//        _mujuView.backgroundColor = [UIColor brownColor];
+
+        //事件传递：第二层。
+        __weak typeof(self) weakSelf = self;
+        _mujuView.byMuJuViewClickRectBlock = ^{
+            if (weakSelf.ctyAndCntViewClickRectBlock) {
+                weakSelf.ctyAndCntViewClickRectBlock();
+            }
+        };
+        
     }
     return _mujuView;
 }

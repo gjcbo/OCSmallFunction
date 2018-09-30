@@ -13,6 +13,9 @@
 @end
 
 @interface NewHeaderView : UIView
+/***9-30 事件传递 第三层*/
+@property (nonatomic, copy) void(^newHeaderViewClickRectBlock)(void);
+
 /**9-29 传值问题 : 跨多个界面传值问题。
  碰到问题了，block 回调问题，传值问题。
  */
