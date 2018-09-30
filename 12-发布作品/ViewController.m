@@ -64,10 +64,6 @@ static NSString * const reuseIdentifier = @"AlbumFiterViewCellIdentifier";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     UIImage *albumFiterImage = [UIImage imageNamed:@"maomao"];
-    
-    
-    
-    
     UIImage *renderedImg = [self renderEditAfterAlbumImage:albumFiterImage didSelectItemAtIndex:indexPath.row];
     
     self.selectedImg = renderedImg; //保存一下

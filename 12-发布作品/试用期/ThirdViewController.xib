@@ -21,12 +21,17 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZJW-xO-ikG">
-                    <rect key="frame" x="73" y="46" width="254" height="298"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZJW-xO-ikG">
+                    <rect key="frame" x="10" y="60" width="355" height="487"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="ZJW-xO-ikG" secondAttribute="bottom" constant="120" id="0Dc-t9-xWN"/>
+                <constraint firstItem="ZJW-xO-ikG" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="HtP-TC-km9"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="ZJW-xO-ikG" secondAttribute="trailing" constant="10" id="Luw-te-rE3"/>
+                <constraint firstItem="ZJW-xO-ikG" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="40" id="n03-ol-cIf"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="26.5" y="52.5"/>
         </view>

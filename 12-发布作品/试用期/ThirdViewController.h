@@ -11,5 +11,7 @@
 @interface ThirdViewController : UIViewController
 @property (nonatomic, strong) UIImage *img;
 
+/**9-30 回传添加滤镜后的图片*/
+@property (nonatomic, copy) void(^thirdVCFilteredBlock)(UIImage *filteredImg);
 
 @end

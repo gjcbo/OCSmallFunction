@@ -9,7 +9,8 @@
 #import "AlbumFiterViewCell.h"
 #import "AlbumFiterModel.h"
 #import "Constant.h"
-#import <Masonry.h>
+//#import <Masonry.h>
+#import "Masonry.h"
 
 @interface AlbumFiterViewCell ()
 

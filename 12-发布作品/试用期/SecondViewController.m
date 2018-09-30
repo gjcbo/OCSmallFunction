@@ -237,12 +237,12 @@ UINavigationControllerDelegate
 #pragma mark - NewHeaderViewDelegate
 - (void)fromPaiZhaoWithImageView:(UIImageView *)iv {
     
-    iv.image = [UIImage imageNamed:@"秋风萧瑟.jpg"];
+//    iv.image = [UIImage imageNamed:@"秋风萧瑟.jpg"];
     
     [self takePhoto];
 }
 - (void)fromAlbumWithImageView:(UIImageView *)iv {
-    iv.image = [UIImage imageNamed:@"冬雪皑皑.jpg"];
+//    iv.image = [UIImage imageNamed:@"冬雪皑皑.jpg"];
     
     [self pushTZImagePickerController];
 }
@@ -323,11 +323,15 @@ UINavigationControllerDelegate
             ThirdViewController *thirdVC = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil];
             thirdVC.img = img;
             
-            [self presentViewController:thirdVC animated:YES completion:nil];
+            //回传添加滤镜后的图片
+            thirdVC.thirdVCFilteredBlock = ^(UIImage *filteredImg) {
+                self.headerVeiw.iv.image = filteredImg; //重新赋值
+            };
             
+            //添加导航条
+            UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:thirdVC];
+            [self presentViewController:navVC animated:YES completion:nil];
         });
-        
-       
     }];
     
     [self presentViewController:imagePickerVc animated:YES completion:nil];
