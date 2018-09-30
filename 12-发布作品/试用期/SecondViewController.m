@@ -9,10 +9,12 @@
 
 
 #import "SecondViewController.h"
+//View
 #import "NewHeaderView.h"
 #import "FooterView.h"
-//Cell
+//View----Cell
 #import "NestStepCell.h"
+
 
 //model
 #import "StepModel.h"
@@ -118,7 +120,7 @@ UINavigationControllerDelegate
 - (NewHeaderView *)headerVeiw {
     if (!_headerVeiw) {
 
-        _headerVeiw = [[NewHeaderView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 580)];
+        _headerVeiw = [[NewHeaderView alloc] initWithFrame:CGRectMake(0, 0, kScreenW, 580 + 200)];
         _headerVeiw.delegate = self;
         _headerVeiw.headerViewBlock = ^(UIImageView *iv) {
             NSLog(@"%s--%d--%@",__FUNCTION__,__LINE__,iv);
@@ -135,7 +137,6 @@ UINavigationControllerDelegate
     }
     return _footerView;
 }
-
 
 #pragma mark - tableView 代理方法
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

@@ -34,6 +34,7 @@
     return self;
 }
 
+
 //添加子控件
 - (void)setupView {
     CGFloat kMargin10 = 10;
@@ -62,6 +63,10 @@
     [self addSubview:self.segControl];
     [self addSubview:self.mujuView];
     [self addSubview:self.quantity];
+    
+    //默认显示视图是
+    self.mujuView.hidden = NO;
+    self.quantity.hidden = YES;
 }
 
 
@@ -77,7 +82,7 @@
     if (!_btn) {
         _btn = [UIButton buttonWithType:(UIButtonTypeCustom)];
         [_btn setTitle:@"面包" forState:(UIControlStateNormal)];
-        [_btn setTitleColor:[UIColor blackColor] forState:(UIControlStateNormal)];
+        [_btn setTitleColor:[UIColor brownColor] forState:(UIControlStateNormal)];
         [_btn setImage:[UIImage imageNamed:@"上下.png"] forState:(UIControlStateNormal)];
         [_btn addTarget:self action:@selector(clickBtnAction:) forControlEvents:(UIControlEventTouchUpInside)];
     }
@@ -88,13 +93,16 @@
     if (!_segControl) {
         NSArray *itemsArr = @[@"按模具",@"按个数"];
         _segControl = [[ZYSegmentedControl alloc] initWithItems:itemsArr target:self sel:@selector(segControlAction:)];
+        _segControl.layer.cornerRadius = 10;
+        _segControl.layer.masksToBounds = YES;
     }
     return _segControl;
 }
+
 - (ByMuJuView *)mujuView {
     if (!_mujuView) {
         _mujuView = [[ByMuJuView alloc] init];
-        _mujuView.backgroundColor = [UIColor brownColor];
+//        _mujuView.backgroundColor = [UIColor brownColor];
     }
     return _mujuView;
 }

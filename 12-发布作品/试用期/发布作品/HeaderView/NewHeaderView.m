@@ -7,13 +7,16 @@
 //
 
 #import "NewHeaderView.h"
-#import "TitleView.h" // 70
+#import "TitleView.h" // 高度:70
 #import "SumaryView.h" // 200
 #import "ThirdStarView.h" //80
+#import "CtyAndCntView.h" // 200
 @interface NewHeaderView()
 @property (nonatomic, strong) TitleView *titleV; //1.
 @property (nonatomic, strong) SumaryView *sumV; //2.
 @property (nonatomic, strong) ThirdStarView *starV; //3.
+@property (nonatomic, strong) CtyAndCntView *ctyAndCntView; //4.分类以及数量view
+
 
 @end
 
@@ -33,6 +36,7 @@
     [self addSubview:self.titleV];
     [self addSubview:self.sumV];
     [self addSubview:self.starV];
+    [self addSubview:self.ctyAndCntView]; 
 }
 
 #pragma mark - lazy
@@ -66,6 +70,14 @@
     }
     return _starV;
 }
+
+- (CtyAndCntView *)ctyAndCntView {
+    if (!_ctyAndCntView) {
+        _ctyAndCntView = [[CtyAndCntView alloc] initWithFrame:CGRectMake(0, 550, kScreen_W, 200)];
+    }
+    return _ctyAndCntView;
+}
+
 
 
 #pragma mark  - 事件监听
