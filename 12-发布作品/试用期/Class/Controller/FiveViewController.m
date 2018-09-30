@@ -13,13 +13,17 @@
 //尝试使用masonry进行布局 ，不尝试了，是要修改frame的大小，是要进行缩放的。
 //#import "Masonry.h"
 
+static NSString *RightTableViewCellId = @"RightTableViewCellId";
 @interface FiveViewController () <VSliderDelegate,
-HSliderDelegate
+HSliderDelegate,
+UITableViewDelegate,UITableViewDataSource
 >
 /**背景图片 所有的小控件都添加到这上面*/
 @property (nonatomic, strong) UIView *bgView;
 /**1.消失按钮*/
 @property (nonatomic, strong) UIButton *disBtn;
+
+@property (nonatomic, strong) UIView *div1;
 
 /**1.左边分段控制器*/
 @property (nonatomic, strong) UISegmentedControl *segLeft;
@@ -31,6 +35,9 @@ HSliderDelegate
 @property (nonatomic, strong) VSlider *vSlider;
 /**水平滑块*/
 @property (nonatomic, strong) HSlider *hSlider;
+@property (nonatomic, strong) UITableView *rightTv;//右边的小tableView
+
+
 
 @end
 
@@ -65,6 +72,24 @@ HSliderDelegate
 //    self.mujuIv.layer.position = CGPointMake(100, 200);
     [self.bgView addSubview:self.mujuIv];
     
+
+    
+    self.div1 = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.disBtn.frame), kScreen_W, 40)];
+    [self.bgView addSubview:self.div1];
+
+    //希望水平居中
+    CGFloat segH = 30;
+    CGFloat segY = (CGRectGetHeight(self.div1.frame) - segH) *0.5;
+    self.segLeft.frame = CGRectMake(10, segY, 150, 30);
+    self.segLeft.backgroundColor = [UIColor whiteColor];
+    self.segLeft.tintColor = [UIColor brownColor];
+    self.segRight.frame = CGRectMake(kScreen_W - 110,segY, 100, 30);
+    self.segRight.backgroundColor = [UIColor whiteColor];
+    self.segRight.tintColor = [UIColor brownColor];
+    [self.div1 addSubview:self.segLeft];
+    [self.div1 addSubview:self.segRight];
+    
+    
     //写死是有问题的
     //垂直滑块: CGRectMake(x, y, w, h)
     self.vSlider = [[VSlider alloc] initWithFrame:CGRectMake(10, 180, 50, 180)];
@@ -76,6 +101,10 @@ HSliderDelegate
     self.hSlider = [[HSlider alloc] initWithFrame:CGRectMake(30, 350 , 180, 40)];
     self.hSlider.delegate = self; //设置代理对象
     [self.bgView addSubview:self.hSlider];
+    
+    CGFloat rightTV_X = self.view.frame.size.width - 80;
+    self.rightTv.frame = CGRectMake(rightTV_X, 200, 70, 100);
+    [self.bgView addSubview:self.rightTv];
 }
 
 
@@ -119,6 +148,97 @@ HSliderDelegate
     return _mujuIv;
 }
 
+/////////////////
+- (UIView *)div1 {
+    if (!_div1) {
+        _div1 = [[UIView alloc] init];
+    }
+    return _div1;
+}
+- (UISegmentedControl *)segLeft {
+    
+    if (!_segLeft) {
+//        UIImage *rectImg = [UIImage imageNamed:@""]; //矩形
+//        UIImage *circleImg = [UIImage imageNamed:@""];//圆形
+//        UIImage *hollowCircleImg = [UIImage imageNamed:@""];//空心圆
+        //        NSArray *items = @[rectImg,circleImg,hollowCircleImg];
+        
+        _segLeft = [[UISegmentedControl alloc] initWithItems:@[@"方形",@"圆形",@"空心圆"]];
+        
+        [_segLeft addTarget:self action:@selector(segLeftAction:) forControlEvents:(UIControlEventValueChanged)];
+    }
+    return _segLeft;
+}
+
+- (UISegmentedControl *)segRight {
+    if (!_segRight) {
+        _segRight = [[UISegmentedControl alloc] initWithItems:@[@"厘米",@"英寸"]];
+        [_segRight addTarget:self action:@selector(segRightAction:) forControlEvents:(UIControlEventValueChanged)];
+    }
+    return _segRight;
+}
+
+- (UITableView *)rightTv {
+    if (!_rightTv) {
+        _rightTv = [[UITableView alloc] initWithFrame:CGRectZero style:(UITableViewStylePlain)];
+        _rightTv.delegate = self;
+        _rightTv.dataSource = self;
+        //注册cell
+        [_rightTv registerClass:[UITableViewCell class] forCellReuseIdentifier:RightTableViewCellId];
+    }
+    return _rightTv;
+}
+#pragma mark - UITableViewDelegate,UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 5;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:RightTableViewCellId];
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld个",indexPath.row];
+    return cell;
+}
+
+#pragma mark - 分段控件事件监听
+- (void)segLeftAction:(UISegmentedControl *)seg {
+    NSLog(@"1.左 选中的下标是:%ld",seg.selectedSegmentIndex);
+    switch (seg.selectedSegmentIndex) {
+        case 0: //方形
+        {self.mujuIv.image = [UIImage imageNamed:@"fbzpamjdf"];
+            self.vSlider.hidden = NO;
+        } break;
+        case 1: //圆形
+        {   self.mujuIv.image = [UIImage imageNamed:@"fbzpamjdy"];
+            self.vSlider.hidden = YES;
+        } break;
+        case 2: //空心圆
+        {   self.mujuIv.image = [UIImage imageNamed:@"fbzpamjkxy"];
+            self.vSlider.hidden = YES;
+        } break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)segRightAction:(UISegmentedControl *)seg {
+    NSLog(@"2.右 选中的下标是:%ld",seg.selectedSegmentIndex);
+    
+    NSString *unit = @"厘米";
+    if (seg.selectedSegmentIndex == 0) { //厘米
+        unit = @"厘米";
+    }else { //inch
+        unit = @"英寸";
+    }
+    //垂直方向
+    self.vSlider.unitStr = unit;
+    self.vSlider.vLb.text = [NSString stringWithFormat:@"%.0f%@",self.vSlider.length,self.vSlider.unitStr];
+
+    //水平方向
+    self.hSlider.unitStr = unit;
+    self.hSlider.hLb.text = [NSString stringWithFormat:@"%.0f%@",self.vSlider.length,self.vSlider.unitStr];
+}
+
 
 #pragma mark - VSliderDelegate & HSliderDelegate
 //垂直
@@ -141,7 +261,11 @@ HSliderDelegate
 
     mujuFrame.size.height = tempH;
     self.mujuIv.frame = mujuFrame;
-    self.vSlider.vLb.text = [NSString stringWithFormat:@"%.0f厘米",value *38];
+    
+    //view直接当model使
+    self.vSlider.length = value * 38;
+    self.vSlider.unitStr = @"厘米";
+    self.vSlider.vLb.text = [NSString stringWithFormat:@"%.0f%@",self.vSlider.length,self.vSlider.unitStr];
 }
 
 - (void)hSliderDidChangeValue:(CGFloat)value {
@@ -163,8 +287,11 @@ HSliderDelegate
     
     self.mujuIv.frame = mujuFrame;
     
-    self.hSlider.hLb.text = [NSString stringWithFormat:@"%.0f",value * 50];
+    self.hSlider.length = value * 50;
+    self.hSlider.unitStr = @"厘米";
+    self.hSlider.hLb.text = [NSString stringWithFormat:@"%.0f%@",self.hSlider.length,self.hSlider.unitStr];
 }
+
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     

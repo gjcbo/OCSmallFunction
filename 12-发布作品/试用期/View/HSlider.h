@@ -16,5 +16,11 @@
 @property (nonatomic, copy)void(^hSliderBlock)(UISlider *slider);
 @property (nonatomic, strong) UILabel *hLb;//水平方向的lb
 
+//单位和长度拼接出 vLb的值
+/**单位*/
+@property (nonatomic, copy) NSString *unitStr;
+/**长度*/
+@property (nonatomic, assign) CGFloat length;
+
 @property (nonatomic, weak) id <HSliderDelegate>delegate;
 @end
