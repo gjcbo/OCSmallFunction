@@ -245,7 +245,7 @@ UITableViewDelegate,UITableViewDataSource
 - (void)vSliderChangedValue:(CGFloat)value {
 
     //修改 mujuIv的frame
-    CGRect mujuFrame = self.mujuIv.frame;
+    CGRect mujuFrame = self.mujuIv.bounds;
     CGFloat h = mujuFrame.size.height;
     
     if (value < 0.1) {
@@ -260,7 +260,7 @@ UITableViewDelegate,UITableViewDataSource
     CGFloat tempH = value * h;
 
     mujuFrame.size.height = tempH;
-    self.mujuIv.frame = mujuFrame;
+    self.mujuIv.bounds = mujuFrame;
     
     //view直接当model使
     self.vSlider.length = value * 38;
@@ -270,7 +270,7 @@ UITableViewDelegate,UITableViewDataSource
 
 - (void)hSliderDidChangeValue:(CGFloat)value {
     CGRect mujuFrame = self.mujuIv.frame;
-    CGFloat w = self.mujuIv.frame.size.width;
+    CGFloat w = self.mujuIv.bounds.size.width;
     
     //处理边界情况
     if (value < 0.1) {
@@ -285,7 +285,7 @@ UITableViewDelegate,UITableViewDataSource
     CGFloat tempW = value * w;
     mujuFrame.size.width = tempW;
     
-    self.mujuIv.frame = mujuFrame;
+    self.mujuIv.bounds = mujuFrame;
     
     self.hSlider.length = value * 50;
     self.hSlider.unitStr = @"厘米";

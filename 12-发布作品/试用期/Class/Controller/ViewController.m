@@ -54,15 +54,16 @@
     [self.view addSubview:slider2];
 }
 
+#pragma mark - 发布产品 全
 - (IBAction)releaseProductAction:(UIButton *)sender {
     NSLog(@"发布产品");
     
 //    ReleaseProductController *releaseVC = [[ReleaseProductController alloc] init];
 //    [self.navigationController pushViewController:releaseVC animated:YES];
-    
     SecondViewController *releaseVC = [[SecondViewController alloc] init];
     [self.navigationController pushViewController:releaseVC animated:YES];
 }
+
 
 - (IBAction)testAction:(UIButton *)sender {
     NSLog(@"%s--%d",__FUNCTION__,__LINE__);
@@ -73,6 +74,7 @@
 }
 
 
+#pragma mark - 10-8 缩放测试
 - (IBAction)testScaleViewAction:(UIButton *)sender {
         ReleaseProductController *releaseVC = [[ReleaseProductController alloc] init];
         [self.navigationController pushViewController:releaseVC animated:YES];

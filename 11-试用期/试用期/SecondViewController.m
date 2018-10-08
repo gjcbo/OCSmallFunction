@@ -103,9 +103,7 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
  
-    if (indexPath.section == 0) {
-        <#statements#>
-    }
+
     if (indexPath.row == 0) { //0.标题cell
         
         TitleCell *titleCell = [tableView dequeueReusableCellWithIdentifier:@"TitleCell"];
