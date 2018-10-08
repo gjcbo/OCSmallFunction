@@ -11,12 +11,13 @@
 #import "SumaryView.h" // 200
 #import "ThirdStarView.h" //80
 #import "CtyAndCntView.h" // 200
+#import "BRStringPickerView.h" // 选择器组件
+#import "UIButton+Extension.h"
 @interface NewHeaderView()
 @property (nonatomic, strong) TitleView *titleV; //1.
 @property (nonatomic, strong) SumaryView *sumV; //2.
 @property (nonatomic, strong) ThirdStarView *starV; //3.
-@property (nonatomic, strong) CtyAndCntView *ctyAndCntView; //4.分类以及数量view
-
+@property (nonatomic, strong) CtyAndCntView *ctyAndCntView; //4.
 
 @end
 
@@ -81,6 +82,24 @@
             if (weakSelf.newHeaderViewClickRectBlock) {
                 weakSelf.newHeaderViewClickRectBlock();
             }
+        };
+        
+        //选择器组件数据源
+        NSArray *arr = @[@"蛋糕",@"补丁",@"马卡龙",@"面包",@"冰淇淋",@"火腿肠",@"大西瓜",@"无敌忍者"];
+
+        //点击了按钮 block 嵌套block
+        _ctyAndCntView.ctyAndCntViewClickBtnBlock = ^{
+
+            [BRStringPickerView showStringPickerWithTitle:@"" dataSource:arr defaultSelValue:@"面包" isAutoSelect:YES themeColor:[UIColor lightGrayColor] resultBlock:^(id selectValue) {
+                
+                // 修改 ctyAndCntView 样式
+                [weakSelf.ctyAndCntView ctyAndCntViewChangeBtnTitle:selectValue];
+                
+                [weakSelf.ctyAndCntView ctyAndCntViewRandomChangeSegControlItems];
+                
+            } cancelBlock:^{
+                NSLog(@"点击了背景视图或取消按钮");
+            }];
         };
     }
     return _ctyAndCntView;

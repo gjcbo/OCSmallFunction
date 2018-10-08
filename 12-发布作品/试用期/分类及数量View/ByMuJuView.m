@@ -95,11 +95,19 @@
 - (void)circleBtnAction:(UIButton *)btn {
     NSLog(@"圆形 %s---%d",__FUNCTION__, __LINE__);
     [JRToast showWithText:@"ByMuJuView:圆形"];
+    
+    if (self.byMuJuViewClickCircleBlock) {
+        self.byMuJuViewClickCircleBlock();
+    }
 }
 
 - (void)hollowCircleBtnAction:(UIButton *)btn {
     NSLog(@"空心圆 %s---%d",__FUNCTION__, __LINE__);
     [JRToast showWithText:@"ByMuJuView:空心圆形"];
+    
+    if (self.byMuJuViewClickHollowCircleBlock) {
+        self.byMuJuViewClickHollowCircleBlock();
+    }
 }
 
 

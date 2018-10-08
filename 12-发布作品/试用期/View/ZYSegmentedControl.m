@@ -24,6 +24,8 @@
 }
 
 - (void)insertItemWithTitleArr:(NSArray<NSString *> *)titleArr selectedIndex:(NSInteger)index {
+    //排他思想:先清空所有的，然后再重新写
+    [self removeAllSegments];
     
     //遍历数组,插入item
     [titleArr enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {

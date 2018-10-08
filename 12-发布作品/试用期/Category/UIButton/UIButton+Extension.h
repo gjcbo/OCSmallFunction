@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface UIButton (Extension)
-/**左边文字，右边图片 ，margin:间距*/
+/**左边文字，右边图片 ，margin:间距
+ 备注: 按钮文字发生变化时，请手动调用此方法，否者会导致文字和图片挤在一起的bug
+ */
 - (void)leftTextRightImageWithMargin:(NSInteger)margin;
 
 - (void)buttonWithTextImg;
