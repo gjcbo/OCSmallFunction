@@ -24,7 +24,10 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:(UIBarButtonItemStyleDone) target:self action:@selector(doneAction)];
     
     [self.view addSubview:self.tableView];
+    
+    //一进来就让tableView处于编辑状态。 关键代码
     self.tableView.editing = YES;
+    
 //    Concatenated NSString literal for an NSArray expression - possibly missing a comma
     //初始化数据源
     self.dataArr = @[@"第一步",@"第二步"@"第三步",@"第四步",@"第五步",@"第六步"].mutableCopy;
@@ -93,9 +96,22 @@
     [self.dataArr insertObject:exchangeStr atIndex:destinationIndexPath.row];
 }
 
-- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return NO;
-}
-
+//- (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return NO;
+//}
+#pragma mark - 笔记
+//需求：删除cell(点击左边的减号按钮触发左滑编辑cell)、移动cell
+/**
+ 想复杂了
+ 1.一进来就让tableView 处于编辑状态。
+ self.tableView.editing = YES;
+ 
+ 2. 删除的话就一个代理方法
+ editActionsForRowAtIndexPath:  可以实现这个代理方法 进行自定义删除样式。默认是delete
+ 
+ 3、移动的话2个代理方法就够了
+  3-1 允许移动 canMoveRowAtIndexPath 返回 YES
+  3-2 moveRowAtIndexPath: toIndexPath: 代理方法移动cell 实现逻辑:先删除在插入
+ */
 @end

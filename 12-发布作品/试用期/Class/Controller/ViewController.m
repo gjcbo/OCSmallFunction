@@ -10,6 +10,7 @@
 #import "ReleaseProductController.h"
 #import "SecondViewController.h"
 #import "FourViewController.h"
+#import "AdjustStepsController.h" //tableView的编辑删除移动操作
 
 @interface ViewController ()
 
@@ -73,12 +74,19 @@
     [self presentViewController:fourVC animated:YES completion:nil];
 }
 
-
 #pragma mark - 10-8 缩放测试
 - (IBAction)testScaleViewAction:(UIButton *)sender {
         ReleaseProductController *releaseVC = [[ReleaseProductController alloc] init];
         [self.navigationController pushViewController:releaseVC animated:YES];
 }
 
+#pragma mark - 10-9 tableView的删除移动操作
+- (IBAction)testTableViewDeleteRemoveAction:(UIButton *)sender {
+    
+    AdjustStepsController *adjustVC = [[AdjustStepsController alloc] init];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:adjustVC];
+    
+    [self presentViewController:navVC animated:YES completion:nil];
+}
 
 @end
