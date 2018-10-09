@@ -23,8 +23,6 @@
 @property (nonatomic, strong) ByMuJuView *byMujuView; //按模具
 @property (nonatomic, strong) ByQuantity *byQuantityView; //按数量
 @property (nonatomic, strong) ByRenFenView *byRenFenView;//按人份
-
-
 @end
 
 @implementation CtyAndCntView
@@ -73,6 +71,7 @@
     //默认显示视图是
     self.byMujuView.hidden = NO;
     self.byQuantityView.hidden = YES;
+    self.byRenFenView.hidden = YES;
 }
 
 
@@ -138,7 +137,7 @@
 - (ByQuantity *)byQuantityView {
     if (!_byQuantityView) {
         _byQuantityView = [[ByQuantity alloc] init];
-        _byQuantityView.backgroundColor = [UIColor redColor];
+//        _byQuantityView.backgroundColor = [UIColor redColor];
     }
     return _byQuantityView;
 }
@@ -146,7 +145,7 @@
 - (ByRenFenView *)byRenFenView {
     if (!_byRenFenView) {
         _byRenFenView = [[ByRenFenView alloc] init];
-        _byRenFenView.backgroundColor = [UIColor greenColor];
+//        _byRenFenView.backgroundColor = [UIColor greenColor];
     }
     return _byRenFenView;
 }
@@ -200,14 +199,15 @@
 /**随机修改 分段控件的items个数*/
 - (void)ctyAndCntViewRandomChangeSegControlItems {
     //0-3 随机数  int intValue;   intValue = (int)(random()%100)+1;//1-100内
-    NSArray *arr0 = @[@"按人份",@"按模具",@"按个数"];
-    NSArray *arr1 = @[@"按模具",@"按人数"];
-    NSArray *arr2 = @[@"按人份",@"按模具",@"按个数"];
-    NSArray *bigArr = @[arr0,arr1,arr2];
-    int randomValue = (arc4random() % 3);
+    NSArray *arr0 = @[@"按模具",@"按个数",@"按人份"];
+    
+//    NSArray *arr1 = @[@"按模具",@"按人数"];
+//    NSArray *arr2 = @[@"按人份",@"按模具",@"按个数"];
+//    NSArray *bigArr = @[arr0,arr1,arr2];
+//    int randomValue = (arc4random() % 3);
     
     //更新按模具、按个数、按人份 视图
-    [self.segControl insertItemWithTitleArr:bigArr[randomValue] selectedIndex:0];
+    [self.segControl insertItemWithTitleArr:arr0 selectedIndex:0];
 }
 @end
 //组件 //模块
