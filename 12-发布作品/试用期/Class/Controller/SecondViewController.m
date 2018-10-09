@@ -11,6 +11,7 @@
 #import "SecondViewController.h"
 //VC
 #import "FiveViewController.h" //缩放view
+#import "AdjustStepsController.h" //调整步骤vc
 //View
 #import "NewHeaderView.h"
 #import "FooterView.h"
@@ -44,6 +45,7 @@ UINavigationControllerDelegate
 
 @property (nonatomic, strong) NSMutableArray *stepArrM;//步骤数组。
 @property (nonatomic, assign) NSInteger cnt;//标记步骤的个数。点击加号按钮自加初始值为1;
+@property (nonatomic, strong) UIButton *adjustStepsBtn; // 调整步骤按钮 双箭头按钮(编辑tableView的顺序) 默认隐藏
 
 @property (nonatomic, strong) UIImagePickerController *imagePickerVc;
 
@@ -150,6 +152,19 @@ UINavigationControllerDelegate
     return _footerView;
 }
 
+//双向箭头按钮
+- (UIButton *)adjustStepsBtn {
+    if (!_adjustStepsBtn) {
+        _adjustStepsBtn = [UIButton buttonWithType:(UIButtonTypeCustom)];
+        [_adjustStepsBtn setImage:[UIImage imageNamed:@"发布作品换层._adjustStepsBtn"] forState:(UIControlStateNormal)];
+        [_adjustStepsBtn addTarget:self action:@selector(adjustStepsBtnAction:) forControlEvents:(UIControlEventTouchUpInside)];
+        _adjustStepsBtn.hidden = YES;
+    }
+    return _adjustStepsBtn;
+}
+
+#pragma mark - ----------分割线--------------
+
 #pragma mark - tableView 代理方法
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2; //食材 + 步骤
@@ -215,6 +230,10 @@ UINavigationControllerDelegate
             addBtn.frame = CGRectMake(x, 0, 40, 40);
             [addBtn addTarget:self action:@selector(addBtnAction:) forControlEvents:(UIControlEventTouchUpInside)];
             [footV1 addSubview:addBtn];
+            
+            CGFloat x2 = x + 60;
+            self.adjustStepsBtn.frame = CGRectMake(x2, 0, 40, 40);
+            [footV1 addSubview:self.adjustStepsBtn];
         }
         return footV1;
         
@@ -222,6 +241,8 @@ UINavigationControllerDelegate
         return nil;
     }
 }
+
+
 
 #pragma mark - 添加
 //添加cell
@@ -237,6 +258,18 @@ UINavigationControllerDelegate
     
     //刷新表格
     [self.tableView reloadData];
+    
+    if (_cnt > 1) { //步骤>1 显示双箭头
+        self.adjustStepsBtn.hidden = NO;
+    }else {
+        self.adjustStepsBtn.hidden = YES;
+    }
+}
+
+- (void)adjustStepsBtnAction:(UIButton *)btn {
+    AdjustStepsController *adjustStepVC = [[AdjustStepsController alloc] init];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:adjustStepVC];
+    [self presentViewController:navVC animated:YES completion:nil];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {

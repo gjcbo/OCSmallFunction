@@ -115,6 +115,9 @@
 		84B85199216B59A50034731E /* NSDate+BRPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B85190216B59A50034731E /* NSDate+BRPickerView.m */; };
 		84B8519A216B59A50034731E /* BRStringPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B85193216B59A50034731E /* BRStringPickerView.m */; };
 		84B8519D216B62320034731E /* ByRenFenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B8519C216B62320034731E /* ByRenFenView.m */; };
+		84B851A0216B6F310034731E /* AdjustStepsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B8519F216B6F310034731E /* AdjustStepsController.m */; };
+		84B851A6216B74A80034731E /* AdjustStepCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B851A4216B74A80034731E /* AdjustStepCell.m */; };
+		84B851A7216B74A80034731E /* AdjustStepCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B851A5216B74A80034731E /* AdjustStepCell.xib */; };
 		F8DC45EF1B1E5368AA9398CD /* libPods-试用期.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B669C4BD8A6484816FFCB214 /* libPods-试用期.a */; };
 /* End PBXBuildFile section */
 
@@ -345,6 +348,11 @@
 		84B85193216B59A50034731E /* BRStringPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRStringPickerView.m; sourceTree = "<group>"; };
 		84B8519B216B62320034731E /* ByRenFenView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ByRenFenView.h; sourceTree = "<group>"; };
 		84B8519C216B62320034731E /* ByRenFenView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ByRenFenView.m; sourceTree = "<group>"; };
+		84B8519E216B6F310034731E /* AdjustStepsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdjustStepsController.h; sourceTree = "<group>"; };
+		84B8519F216B6F310034731E /* AdjustStepsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdjustStepsController.m; sourceTree = "<group>"; };
+		84B851A3216B74A80034731E /* AdjustStepCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdjustStepCell.h; sourceTree = "<group>"; };
+		84B851A4216B74A80034731E /* AdjustStepCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdjustStepCell.m; sourceTree = "<group>"; };
+		84B851A5216B74A80034731E /* AdjustStepCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdjustStepCell.xib; sourceTree = "<group>"; };
 		A0DF1E4572C1C2956EF34B62 /* Pods-试用期.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-试用期.release.xcconfig"; path = "Pods/Target Support Files/Pods-试用期/Pods-试用期.release.xcconfig"; sourceTree = "<group>"; };
 		AAE7AC7879E3F51A3AB4E418 /* Pods-试用期.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-试用期.debug.xcconfig"; path = "Pods/Target Support Files/Pods-试用期/Pods-试用期.debug.xcconfig"; sourceTree = "<group>"; };
 		B669C4BD8A6484816FFCB214 /* libPods-试用期.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-试用期.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -556,6 +564,7 @@
 		843B599A2160BEA30039B3DC /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				84B851A1216B748B0034731E /* View */,
 				843B599B2160BEAE0039B3DC /* Controller */,
 			);
 			path = Class;
@@ -568,6 +577,8 @@
 				842D1A2A215E070E00CD3811 /* ViewController.m */,
 				844BC9F9215E4A2400A71F11 /* SecondViewController.h */,
 				844BC9FA215E4A2400A71F11 /* SecondViewController.m */,
+				84B8519E216B6F310034731E /* AdjustStepsController.h */,
+				84B8519F216B6F310034731E /* AdjustStepsController.m */,
 				846C099F215F92AF003BAFCA /* ThirdViewController.h */,
 				846C09A0215F92AF003BAFCA /* ThirdViewController.m */,
 				846C09A1215F92AF003BAFCA /* ThirdViewController.xib */,
@@ -858,6 +869,24 @@
 			path = StringPickerView;
 			sourceTree = "<group>";
 		};
+		84B851A1216B748B0034731E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84B851A2216B748B0034731E /* 调整步骤cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84B851A2216B748B0034731E /* 调整步骤cell */ = {
+			isa = PBXGroup;
+			children = (
+				84B851A3216B74A80034731E /* AdjustStepCell.h */,
+				84B851A4216B74A80034731E /* AdjustStepCell.m */,
+				84B851A5216B74A80034731E /* AdjustStepCell.xib */,
+			);
+			path = "调整步骤cell";
+			sourceTree = "<group>";
+		};
 		A217DB79F9D98F8C01865A69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -993,6 +1022,7 @@
 				843B59A32160D5470039B3DC /* 叉号.png in Resources */,
 				84B85196216B59A50034731E /* BRPickerView.bundle in Resources */,
 				842D1A30215E070E00CD3811 /* Assets.xcassets in Resources */,
+				84B851A7216B74A80034731E /* AdjustStepCell.xib in Resources */,
 				846C0924215F7124003BAFCA /* 加号2-fill.png in Resources */,
 				846C08C4215F0E42003BAFCA /* 秋风萧瑟.jpg in Resources */,
 				842D1A2E215E070E00CD3811 /* Main.storyboard in Resources */,
@@ -1090,6 +1120,7 @@
 				842D1A36215E070E00CD3811 /* main.m in Sources */,
 				846C09E3215F9910003BAFCA /* IFBrannanFilter.m in Sources */,
 				846C09DE215F9910003BAFCA /* AlbumFiterModel.m in Sources */,
+				84B851A0216B6F310034731E /* AdjustStepsController.m in Sources */,
 				846C09EA215F9910003BAFCA /* IFLordKelvinFilter.m in Sources */,
 				846C09DD215F9910003BAFCA /* AlbumFilterManager.m in Sources */,
 				842D1A6E215E334200CD3811 /* VSlider.m in Sources */,
@@ -1101,6 +1132,7 @@
 				846C09EC215F9910003BAFCA /* IFNormalFilter.m in Sources */,
 				846C094A215F7AAB003BAFCA /* NSBundle+TZImagePicker.m in Sources */,
 				846C09E7215F9910003BAFCA /* IFImageFilter.m in Sources */,
+				84B851A6216B74A80034731E /* AdjustStepCell.m in Sources */,
 				84B85194216B59A50034731E /* BRAddressModel.m in Sources */,
 				843B58922160778C0039B3DC /* ByMuJuView.m in Sources */,
 				843B589821607D970039B3DC /* FourViewController.m in Sources */,
