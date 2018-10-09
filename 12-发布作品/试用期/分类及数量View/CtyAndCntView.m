@@ -112,26 +112,25 @@
         __weak typeof(self) weakSelf = self;
         _byMujuView.byMuJuViewClickRectBlock = ^{ //矩形模具
             if (weakSelf.ctyAndCntViewClickRectBlock) {
-                weakSelf.ctyAndCntViewClickRectBlock();
+                weakSelf.ctyAndCntViewClickRectBlock(MuJuRectType);
             }
         };
+        
         //圆形模具
         _byMujuView.byMuJuViewClickCircleBlock = ^{
             if (weakSelf.ctyAndCntViewClickCircleBlock) {
-                weakSelf.ctyAndCntViewClickCircleBlock();
+                weakSelf.ctyAndCntViewClickCircleBlock(MuJuCircleType);
             }
         };
         
         //空心圆模具
         _byMujuView.byMuJuViewClickHollowCircleBlock = ^{
             if (weakSelf.ctyAndCntViewClickHollowCircleBlock) {
-                weakSelf.ctyAndCntViewClickHollowCircleBlock();
+                weakSelf.ctyAndCntViewClickHollowCircleBlock(MuJuHollowCircleType);
             }
         };
-        
-        
-        
     }
+    
     return _byMujuView;
 }
 - (ByQuantity *)byQuantityView {

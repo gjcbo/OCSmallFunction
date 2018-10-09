@@ -12,9 +12,12 @@
 - (void)fromAlbumWithImageView:(UIImageView *)iv;
 @end
 
+//点击模具(矩形、圆形、空心圆)的统一回调
+typedef void(^NewHeaderViewClickMuJuBlock)(MuJuType newHeaderViewMuJuType);
 @interface NewHeaderView : UIView
 /***9-30 事件传递 第三层*/
-@property (nonatomic, copy) void(^newHeaderViewClickRectBlock)(void);
+@property (nonatomic, copy) NewHeaderViewClickMuJuBlock newHeaderViewClickMuJuBlock;
+
 
 /**9-29 传值问题 : 跨多个界面传值问题。
  碰到问题了，block 回调问题，传值问题。

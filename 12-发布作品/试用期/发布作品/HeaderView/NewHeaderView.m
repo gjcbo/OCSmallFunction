@@ -76,20 +76,14 @@
     if (!_ctyAndCntView) {
         _ctyAndCntView = [[CtyAndCntView alloc] initWithFrame:CGRectMake(0, 550, kScreen_W, 200)];
         
-        //事件传递第三层
         __weak typeof(self) weakSelf = self;
-        _ctyAndCntView.ctyAndCntViewClickRectBlock = ^{
-            if (weakSelf.newHeaderViewClickRectBlock) {
-                weakSelf.newHeaderViewClickRectBlock();
-            }
-        };
+
         
         //选择器组件数据源
         NSArray *arr = @[@"蛋糕",@"补丁",@"马卡龙",@"面包",@"冰淇淋",@"火腿肠",@"大西瓜",@"无敌忍者"];
-
         //点击了按钮 block 嵌套block
         _ctyAndCntView.ctyAndCntViewClickBtnBlock = ^{
-
+            
             [BRStringPickerView showStringPickerWithTitle:@"" dataSource:arr defaultSelValue:@"面包" isAutoSelect:YES themeColor:[UIColor lightGrayColor] resultBlock:^(id selectValue) {
                 
                 // 修改 ctyAndCntView 样式
@@ -101,7 +95,33 @@
                 NSLog(@"点击了背景视图或取消按钮");
             }];
         };
+        
+        
+        //事件传递第三层
+        _ctyAndCntView.ctyAndCntViewClickRectBlock = ^(MuJuType ctyMujuType) {
+            
+            NSLog(@"矩形回调 %s--%d 模具类型:%ld ",__FUNCTION__,__LINE__,(long)ctyMujuType);
+            
+            if (weakSelf.newHeaderViewClickMuJuBlock) {
+                weakSelf.newHeaderViewClickMuJuBlock(ctyMujuType);
+            }
+        };
+        _ctyAndCntView.ctyAndCntViewClickCircleBlock = ^(MuJuType ctyMujuType) {
+            NSLog(@"圆形回调 %s--%d 模具类型:%ld ",__FUNCTION__,__LINE__,(long)ctyMujuType);
+
+            if (weakSelf.newHeaderViewClickMuJuBlock) {
+                weakSelf.newHeaderViewClickMuJuBlock(ctyMujuType);
+            }
+        };
+        _ctyAndCntView.ctyAndCntViewClickHollowCircleBlock = ^(MuJuType ctyMujuType) {
+            NSLog(@"空心圆回调 %s--%d 模具类型:%ld ",__FUNCTION__,__LINE__,(long)ctyMujuType);
+
+            if (weakSelf.newHeaderViewClickMuJuBlock) {
+                weakSelf.newHeaderViewClickMuJuBlock(ctyMujuType);
+            }
+        };
     }
+    
     return _ctyAndCntView;
 }
 
@@ -115,7 +135,6 @@
 - (void)selectedPicAlert {
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@"选择一张封面" message:@"" preferredStyle:(UIAlertControllerStyleActionSheet)];
     UIAlertAction *paizhao = [UIAlertAction actionWithTitle:@"拍照" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction * _Nonnull action) {
-        
         
         NSLog(@"%s----%d 拍照",__FUNCTION__,__LINE__);
     

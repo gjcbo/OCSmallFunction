@@ -134,13 +134,12 @@ UINavigationControllerDelegate
     
     //跳转控制器。跳转到缩放视图界面。
     __weak typeof(self) weakSelf = self;
-    _headerVeiw.newHeaderViewClickRectBlock = ^{
+    
+    _headerVeiw.newHeaderViewClickMuJuBlock = ^(MuJuType newHeaderViewMuJuType) {
         FiveViewController *fiveVC = [[FiveViewController alloc] init];
-        
+        fiveVC.mujuType = newHeaderViewMuJuType; //模具类型（矩形、圆形、空心圆)
         [weakSelf presentViewController:fiveVC animated:YES completion:nil];
     };
-    
-    
     return _headerVeiw;
 }
 

@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FiveViewController : UIViewController
+/**模具类型 在 Const.h 文件中定义的*/
+@property (nonatomic) MuJuType mujuType;
 
 @end

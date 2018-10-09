@@ -55,7 +55,35 @@ UITableViewDelegate,UITableViewDataSource
     
     //布局子视图
     [self setupView];
+    
+    [self showOrHideVSliderHSliderAndMuJuImageByMuJuType:self.mujuType];
 }
+
+/**根据前面传递过来的 模具类型显示不同的 模具图片 以及 vSlide 和hSlider 的显示或隐藏*/
+- (void)showOrHideVSliderHSliderAndMuJuImageByMuJuType:(MuJuType)mujutype {
+    switch (mujutype) {
+        case MuJuRectType: {
+               NSLog(@"矩形模具");
+            //默认图片:矩形模具
+            
+        }break;
+        case MuJuCircleType: {
+            NSLog(@"圆形模具");
+            self.mujuIv.image = [UIImage imageNamed:@"fbzpamjdy"];
+            self.vSlider.hidden = YES; //垂直滑块隐藏
+        }break;
+        case MuJuHollowCircleType: {
+            NSLog(@"空心圆模具");
+            self.mujuIv.image = [UIImage imageNamed:@"fbzpamjkxy"];
+            self.vSlider.hidden = YES; //垂直滑块隐藏
+        }break;
+        default:
+            break;
+    }
+}
+
+
+
 
 //添加控件、设置frame
 - (void)setupView {
@@ -66,12 +94,11 @@ UITableViewDelegate,UITableViewDataSource
     [self.bgView addSubview:self.disBtn];
     
     //模具
-    self.mujuIv.frame = CGRectMake(100, 200, 150, 150);
+    self.mujuIv.frame = CGRectMake(60, 200, 150, 150);
     //需求，需要扰中心点缩放。不对 ❌
 //    self.mujuIv.layer.anchorPoint = CGPointMake(0.5f, 0.5f);
 //    self.mujuIv.layer.position = CGPointMake(100, 200);
     [self.bgView addSubview:self.mujuIv];
-    
 
     
     self.div1 = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(self.disBtn.frame), kScreen_W, 40)];
@@ -269,6 +296,7 @@ UITableViewDelegate,UITableViewDataSource
 }
 
 - (void)hSliderDidChangeValue:(CGFloat)value {
+    
     CGRect mujuFrame = self.mujuIv.frame;
     CGFloat w = self.mujuIv.bounds.size.width;
     
@@ -283,7 +311,14 @@ UITableViewDelegate,UITableViewDataSource
     }
     
     CGFloat tempW = value * w;
-    mujuFrame.size.width = tempW;
+
+    if (self.mujuType == MuJuRectType) { //方形模具 ： 自由缩放
+        mujuFrame.size.width = tempW;
+
+    }else { //圆形模具 ：等比缩放
+        mujuFrame.size.width = tempW;
+        mujuFrame.size.height = tempW;
+    }
     
     self.mujuIv.bounds = mujuFrame;
     
